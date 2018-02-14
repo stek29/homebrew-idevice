@@ -15,7 +15,10 @@ class Libfragmentzip < Formula
   def install
     mkdir "m4"
     cp "LICENSE", "COPYING"
-    system "./autogen.sh", "--prefix=#{prefix}"
+    system "./autogen.sh", "--disable-debug",
+                          "--disable-dependency-tracking",
+                          "--disable-silent-rules",
+                          "--prefix=#{prefix}"
     system "make"
     system "make", "install"
   end
