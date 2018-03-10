@@ -1,39 +1,36 @@
 # homebrew-idevice
-
 Homebrew tap with various \*OS related tools
 
 ## Already in homebrew-core
-- ldid
-- libimobiledevice (installing with --HEAD is recommended)
-- ideviceinstaller
+- [ldid]( https://cydia.saurik.com/info/ldid/ )
+- [libimobiledevice]( https://www.libimobiledevice.org/ ) (installing with --HEAD is recommended)
+- [ideviceinstaller]( https://www.libimobiledevice.org/ )
 
 ## Already in homebrew-cask
-- joker
-- jtool
-- simplistic
+- [joker]( http://newosxbook.com/tools/joker.html )
+- [jtool]( http://newosxbook.com/tools/jtool.html )
+- [simplistic]( http://newosxbook.com/tools/simplistic.html ) (jlutil)
 
 ## Casks in this tap
-- xpoce (2.0)
+- [xpoce]( http://www.newosxbook.com/tools/XPoCe2.html ) (2.0)
 
 ## Formulas in this tap
-- futurerestore-encounter
-- futurerestore
-- img4tool-tihm
-- iokit-utils
-- iometa
-- ios-kern-utils
-- ldid2
-- libfragmentzip
-- libipatcher
-- libirecovery
-- lzfse
-- partialzipbrowser
-- tsschecker-encounter
-- tsschecker
-- unsign
+- [futurerestore-encounter]( https://github.com/encounter/futurerestore )
+- [futurerestore]( https://github.com/tihmstar/futurerestore )
+- [img4tool-tihm]( https://github.com/tihmstar/img4tool )
+- [iokit-utils]( https://github.com/Siguza/iokit-utils )
+- [iometa]( https://github.com/Siguza/iometa )
+- [ios-kern-utils]( https://github.com/Siguza/ios-kern-utils )
+- [ldid2]( https://github.com/xerub/ldid )
+- [libfragmentzip]( https://github.com/tihmstar/libfragmentzip )
+- [libipatcher]( https://github.com/tihmstar/libipatcher )
+- [libirecovery]( https://github.com/libimobiledevice/libirecovery )
+- [lzfse]( https://github.com/lzfse/lzfse )
+- [partialzipbrowser]( https://github.com/tihmstar/partialZipBrowser )
+- [tsschecker-encounter]( https://github.com/encounter/tsschecker )
+- [tsschecker]( https://github.com/tihmstar/tsschecker )
+- [unsign]( http://www.woodmann.com/collaborative/tools/index.php/Unsign )
 
-## TODO
-- xpwn
-- kcache
-- More? File an issue :)
+## Requests
+- Want some other package? File an issue :)
 
