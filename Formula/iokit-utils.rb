@@ -2,7 +2,7 @@ class IokitUtils < Formula
   desc "Dev tools for probing IOKit"
   homepage "https://github.com/Siguza/iokit-utils"
   url "https://github.com/Siguza/iokit-utils.git"
-  version "git"
+  version "git0"
 
   def install
     system "make"
@@ -13,4 +13,3 @@ class IokitUtils < Formula
     end
   end
 end
-

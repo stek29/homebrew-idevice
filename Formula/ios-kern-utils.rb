@@ -17,4 +17,3 @@ class IosKernUtils < Formula
     end
   end
 end
-

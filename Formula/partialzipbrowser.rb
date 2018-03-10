@@ -1,8 +1,8 @@
 class Partialzipbrowser < Formula
-  desc "a tool for browsing and downloading files from zip files on remote webserver"
+  desc "Tool for zip files on remote webserver"
   homepage "https://github.com/tihmstar/partialZipBrowser"
   url "https://github.com/tihmstar/partialZipBrowser.git"
-  version "git"
+  version "git0"
 
   depends_on "pkg-config" => :build
   depends_on "autoconf" => :build
@@ -20,5 +20,4 @@ class Partialzipbrowser < Formula
     system "make"
     system "make", "install"
   end
-
 end

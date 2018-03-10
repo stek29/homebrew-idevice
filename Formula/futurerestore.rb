@@ -1,10 +1,12 @@
 class Futurerestore < Formula
-  desc "A hacked up idevicerestore wrapper, which allows specifying SEP and Baseband for restoring"
+  desc "Hacked up idevicerestore wrapper"
   homepage "https://github.com/tihmstar/futurerestore"
   url "https://github.com/tihmstar/futurerestore.git"
-  version "git"
+  version "git0"
 
   head "https://github.com/tihmstar/futurerestore.git"
+
+  option "without-libipatcher", "Don't bundle libipatcher; disables Odysseus support"
 
   depends_on "pkg-config" => :build
   depends_on "autoconf" => :build
@@ -15,8 +17,6 @@ class Futurerestore < Formula
   depends_on "libimobiledevice"
   depends_on "libfragmentzip"
   depends_on "libirecovery"
-
-  option "without-libipatcher", "Don't bundle libipatcher; disables Odysseus support"
 
   def install
     mkdir "m4"
@@ -34,5 +34,4 @@ class Futurerestore < Formula
     # system "make", "install"
     bin.install "futurerestore/futurerestore" => "futurerestore"
   end
-
 end

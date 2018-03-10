@@ -1,5 +1,5 @@
 class Tsschecker < Formula
-  desc "a powerfull tool to check tss signing status of various devices and firmwares"
+  desc "Tool to check tss signing status of various devices"
   homepage "https://github.com/tihmstar/tsschecker"
   url "https://github.com/tihmstar/tsschecker/archive/v212.tar.gz"
   sha256 "cdcaa81bca0f4725f646ed95c8e7f1565492949e8b9c5c7607e8759fed68b6f6"
@@ -27,5 +27,4 @@ class Tsschecker < Formula
     # rm_rf "#{lib}/libjssy.a"
     bin.install "tsschecker/tsschecker" => "tsschecker"
   end
-
 end

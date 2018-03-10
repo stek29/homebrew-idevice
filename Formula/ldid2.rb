@@ -3,14 +3,14 @@ class Ldid2 < Formula
   homepage "https://github.com/xerub/ldid"
 
   url "https://github.com/xerub/ldid.git"
-  head "https://github.com/xerub/ldid.git"
-
   version "2.0"
+
+  head "https://github.com/xerub/ldid.git"
 
   depends_on "openssl"
 
   def install
-    system ENV.cc, *%W[-I. sha224-256.c ldid2.cpp lookup2.c -lc++ -o ldid2]
+    system ENV.cc, "-I.", "sha224-256.c", "ldid2.cpp", "lookup2.c", "-lc++", "-oldid2"
     bin.install "ldid2"
   end
 

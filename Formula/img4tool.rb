@@ -1,8 +1,8 @@
 class Img4tool < Formula
-  desc "A tool for manipulating IMG4, IM4M and IM4P files"
+  desc "Tool for manipulating IMG4, IM4M and IM4P files"
   homepage "https://github.com/tihmstar/img4tool"
-  version 'git'
   url "https://github.com/tihmstar/img4tool.git"
+  version "git0"
   head "https://github.com/tihmstar/img4tool.git"
 
   depends_on "pkg-config" => :build
@@ -22,5 +22,4 @@ class Img4tool < Formula
     system "make"
     system "make", "install"
   end
-
 end

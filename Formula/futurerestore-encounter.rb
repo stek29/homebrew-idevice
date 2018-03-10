@@ -1,11 +1,14 @@
 class FuturerestoreEncounter < Formula
-  desc "iOS upgrade and downgrade tool utilizing SHSH blobs (unofficial fork supporting iOS 11 and newer devices)"
+  desc "iOS up/downgrade tool - unofficial fork"
   homepage "https://github.com/encounter/futurerestore"
+
   url "https://github.com/encounter/futurerestore.git",
     :tag => "v173",
     :revision => "a0113a4e46bfd00962cd25e3af548fc8b0bd21fd"
 
   head "https://github.com/encounter/futurerestore.git"
+
+  option "without-libipatcher", "Don't bundle libipatcher; disables Odysseus support"
 
   depends_on "pkg-config" => :build
   depends_on "autoconf" => :build
@@ -18,8 +21,6 @@ class FuturerestoreEncounter < Formula
   depends_on "libirecovery"
 
   conflicts_with "futurerestore", :because => "it's an unofficial fork"
-
-  option "without-libipatcher", "Don't bundle libipatcher; disables Odysseus support"
 
   def install
     mkdir "m4"
@@ -46,5 +47,4 @@ class FuturerestoreEncounter < Formula
 
     bin.install "futurerestore-fixed" => "futurerestore"
   end
-
 end
