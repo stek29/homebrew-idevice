@@ -22,7 +22,10 @@ class Tsschecker < Formula
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
     system "make"
-    system "make", "install"
+    # No, thanks, we dont need libjssy
+    # system "make", "install"
+    # rm_rf "#{lib}/libjssy.a"
+    bin.install "tsschecker/tsschecker" => "tsschecker"
   end
 
 end
