@@ -2,7 +2,7 @@ class Libirecovery < Formula
   desc "library for communication to iBoot/iBSS on iOS devices via USB."
   homepage "https://github.com/libimobiledevice/libirecovery"
   url "https://github.com/libimobiledevice/libirecovery.git"
-  version "0.2.1"
+  version "git"
 
   depends_on "automake" => :build
   depends_on "libtool" => :build

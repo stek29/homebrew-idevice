@@ -2,9 +2,7 @@ class Partialzipbrowser < Formula
   desc "a tool for browsing and downloading files from zip files on remote webserver"
   homepage "https://github.com/tihmstar/partialZipBrowser"
   url "https://github.com/tihmstar/partialZipBrowser.git"
-  version "1.0.1"
-
-  head "https://github.com/tihmstar/partialZipBrowser.git"
+  version "git"
 
   depends_on "pkg-config" => :build
   depends_on "autoconf" => :build
