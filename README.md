@@ -28,6 +28,7 @@ Homebrew tap with various \*OS related tools
 - libirecovery
 - lzfse
 - partialzipbrowser
+- tsschecker-encounter
 - tsschecker
 - unsign
 
