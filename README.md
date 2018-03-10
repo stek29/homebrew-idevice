@@ -18,7 +18,7 @@ Homebrew tap with various \*OS related tools
 ## Formulas in this tap
 - futurerestore-encounter
 - futurerestore
-- img4tool
+- img4tool-tihm
 - iokit-utils
 - iometa
 - ios-kern-utils

@@ -1,4 +1,4 @@
-class Img4tool < Formula
+class Img4toolTihm < Formula
   desc "Tool for manipulating IMG4, IM4M and IM4P files"
   homepage "https://github.com/tihmstar/img4tool"
   url "https://github.com/tihmstar/img4tool.git",
@@ -37,6 +37,6 @@ class Img4tool < Formula
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
     system "make"
-    system "make", "install"
+    bin.install "img4tool/img4tool"
   end
 end
