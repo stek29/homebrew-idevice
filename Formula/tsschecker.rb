@@ -14,9 +14,25 @@ class Tsschecker < Formula
   depends_on "libfragmentzip"
   depends_on "libirecovery"
 
+  def fix_tihmstar
+    mkdir_p "m4"
+
+    if File.symlink?("COPYING")
+      rm "COPYING"
+      if File.exist?("LICENSE")
+        cp "LICENSE", "COPYING"
+      else
+        touch "COPYING"
+      end
+    end
+
+    vers = version.to_s.sub /[^\d]/, ""
+    inreplace(File.exist?("setBuildVersion.sh") ? "setBuildVersion.sh" : "autogen.sh", "$(git rev-list --count HEAD)", vers)
+  end
+
   def install
-    mkdir "m4"
-    cp "LICENSE", "COPYING"
+    fix_tihmstar
+
     system "./autogen.sh", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",

@@ -40,14 +40,19 @@ class Libipatcher < Formula
   end
 
   def fix_tihmstar
+    mkdir_p "m4"
+
     if File.symlink?("COPYING")
       rm "COPYING"
-      cp "LICENSE", "COPYING"
+      if File.exist?("LICENSE")
+        cp "LICENSE", "COPYING"
+      else
+        touch "COPYING"
+      end
     end
 
-    vers = version.to_s.sub /[^\d]/, ''
-    inreplace "setBuildVersion.sh", '$(git rev-list --count HEAD)', vers if File.exists?("setBuildVersion.sh")
-    inreplace "autogen.sh", '$(git rev-list --count HEAD)', vers
+    vers = version.to_s.sub /[^\d]/, ""
+    inreplace(File.exist?("setBuildVersion.sh") ? "setBuildVersion.sh" : "autogen.sh", "$(git rev-list --count HEAD)", vers)
   end
 
   def install
