@@ -15,6 +15,7 @@ Homebrew tap with various \*OS related tools
 - [xpoce]( http://www.newosxbook.com/tools/XPoCe2.html ) (2.0)
 
 ## Formulas in this tap
+- [fsmon]( https://github.com/nowsecure/fsmon )
 - [futurerestore-encounter]( https://github.com/encounter/futurerestore )
 - [futurerestore]( https://github.com/tihmstar/futurerestore )
 - [img4tool-tihm]( https://github.com/tihmstar/img4tool )
