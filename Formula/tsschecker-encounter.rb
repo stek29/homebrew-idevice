@@ -18,19 +18,17 @@ class TsscheckerEncounter < Formula
   conflicts_with "tsschecker", :because => "it's an unofficial fork"
 
   def fix_tihmstar
-    mkdir_p "m4"
-
     if File.symlink?("COPYING")
       rm "COPYING"
-      if File.exist?("LICENSE")
-        cp "LICENSE", "COPYING"
-      else
-        touch "COPYING"
-      end
+      touch "LICENSE"
+      cp "LICENSE", "COPYING"
     end
 
-    vers = version.to_s.sub /[^\d]/, ""
-    inreplace(File.exist?("setBuildVersion.sh") ? "setBuildVersion.sh" : "autogen.sh", "$(git rev-list --count HEAD)", vers)
+    files = %w[setBuildVersion.sh autogen.sh configure.ac]
+    inreplace files.select { |f| File.exist? f },
+      "$(git rev-list --count HEAD)",
+      version.to_s.gsub(/[^\d]/, ""),
+      false
   end
 
   def install
