@@ -13,6 +13,7 @@ Homebrew tap with various \*OS related tools
 
 ## Casks in this tap
 - [xpoce]( http://www.newosxbook.com/tools/XPoCe2.html ) (2.0)
+- [supraudit]( http://newosxbook.com/tools/supraudit.html )
 
 ## Formulas in this tap
 - [fsmon]( https://github.com/nowsecure/fsmon )
