@@ -10,14 +10,7 @@ cask 'supraudit' do
   artifact 'usr/share/man/manj/supraudit.j', target: '/usr/local/share/man/man1/supraudit.1'
 
   caveats do
-    lic_path = @cask.staged_path.join('tmp/LICENSE')
-    ar = []
-    ar << 'Installing this Cask means you have AGREED to the'
-    ar << 'following license:'
-    ar << ''
-    ar << File.read(lic_path)
-
-    ar.join "\n"
+    license "file:///#{@cask.staged_path.join('tmp/LICENSE')}"
   end
 end
 
