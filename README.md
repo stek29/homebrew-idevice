@@ -28,6 +28,7 @@ Homebrew tap with various \*OS related tools
 - [libfragmentzip]( https://github.com/tihmstar/libfragmentzip )
 - [libipatcher]( https://github.com/tihmstar/libipatcher )
 - [libirecovery]( https://github.com/libimobiledevice/libirecovery )
+- [partial-zip]( https://github.com/xerub/img4tool )
 - [partialzipbrowser]( https://github.com/tihmstar/partialZipBrowser )
 - [tsschecker-encounter]( https://github.com/encounter/tsschecker )
 - [tsschecker]( https://github.com/tihmstar/tsschecker )
