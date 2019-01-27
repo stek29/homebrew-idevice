@@ -18,7 +18,7 @@ Homebrew tap with various \*OS related tools
 
 ## Formulas in this tap
 - [fsmon]( https://github.com/nowsecure/fsmon )
-- [futurerestore-encounter]( https://github.com/encounter/futurerestore )
+- [futurerestore-s0uthwest]( https://github.com/s0uthwest/futurerestore )
 - [futurerestore]( https://github.com/tihmstar/futurerestore )
 - [idevicerestore]( http://www.libimobiledevice.org/ )
 - [img4tool-tihmstar]( https://github.com/tihmstar/img4tool )
