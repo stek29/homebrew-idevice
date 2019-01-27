@@ -21,7 +21,7 @@ Homebrew tap with various \*OS related tools
 - [futurerestore-encounter]( https://github.com/encounter/futurerestore )
 - [futurerestore]( https://github.com/tihmstar/futurerestore )
 - [idevicerestore]( http://www.libimobiledevice.org/ )
-- [img4tool-tihm]( https://github.com/tihmstar/img4tool )
+- [img4tool-tihmstar]( https://github.com/tihmstar/img4tool )
 - [img4tool-xerub]( https://github.com/xerub/img4tool )
 - [iokit-utils]( https://github.com/Siguza/iokit-utils )
 - [iometa]( https://github.com/Siguza/iometa )
