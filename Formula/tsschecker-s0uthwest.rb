@@ -1,11 +1,11 @@
-class TsscheckerEncounter < Formula
+class TsscheckerS0uthwest < Formula
   desc "Tool to check tss signing status of various devices"
-  homepage "https://github.com/encounter/tsschecker"
-  url "https://github.com/encounter/tsschecker.git",
-    :tag => "v268",
-    :revision => "9ce5e00fdeaba8d7e763a028d32b11937839d2f9"
+  homepage "https://github.com/s0uthwest/tsschecker"
+  url "https://github.com/s0uthwest/tsschecker.git",
+    :tag => "327",
+    :revision => "d598017bb03c5d87307dbd133c68b02e89c8163a"
 
-  head "https://github.com/encounter/tsschecker.git"
+  head "https://github.com/s0uthwest/tsschecker.git"
 
   depends_on "pkg-config" => :build
   depends_on "autoconf" => :build
@@ -45,15 +45,6 @@ class TsscheckerEncounter < Formula
 
     # we don't need libjssy.a/fragmentzip/idevicerestore.1
     # system "make", "install"
-
-    # fix fragmentzip issue
-    # See https://github.com/tihmstar/tsschecker/commit/f8644fabb1adb04fc0ee42860fd7d2e0469823dc#commitcomment-28027109
-    f = MachO::MachOFile.new("tsschecker/.libs/tsschecker")
-    old_name = f.linked_dylibs.select { |fn| fn =~ /libfragmentzip/ } .first
-    new_name = MachO::MachOFile.new("#{Formula["libfragmentzip"].opt_lib}/libfragmentzip.dylib").dylib_id
-    f.change_install_name(old_name, new_name)
-    f.write("tsschecker-fixed")
-
-    bin.install "tsschecker-fixed" => "tsschecker"
+    bin.install "tsschecker"
   end
 end

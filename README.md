@@ -32,7 +32,7 @@ Homebrew tap with various \*OS related tools
 - [libirecovery]( https://github.com/libimobiledevice/libirecovery )
 - [partial-zip]( https://github.com/planetbeing/partial-zip )
 - [partialzipbrowser]( https://github.com/tihmstar/partialZipBrowser )
-- [tsschecker-encounter]( https://github.com/encounter/tsschecker )
+- [tsschecker-s0uthwest]( https://github.com/s0uthwest/tsschecker )
 - [tsschecker]( https://github.com/tihmstar/tsschecker )
 - [unsign]( http://www.woodmann.com/collaborative/tools/index.php/Unsign )
 
