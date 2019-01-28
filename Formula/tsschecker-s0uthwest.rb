@@ -5,6 +5,7 @@ class TsscheckerS0uthwest < Formula
   url "https://github.com/s0uthwest/tsschecker.git",
     :revision => "9be4a1cd83ba0a38082b0634b3a0ade8526f2733"
   version "330"
+  revision 1
 
   head "https://github.com/s0uthwest/tsschecker.git"
 
@@ -46,6 +47,6 @@ class TsscheckerS0uthwest < Formula
 
     # we don't need libjssy.a/fragmentzip/idevicerestore.1
     # system "make", "install"
-    bin.install "tsschecker"
+    bin.install "tsschecker/tsschecker"
   end
 end
