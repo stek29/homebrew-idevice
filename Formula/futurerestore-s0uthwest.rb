@@ -2,9 +2,10 @@ class FuturerestoreS0uthwest < Formula
   desc "iOS up/downgrade tool - unofficial fork"
   homepage "https://github.com/s0uthwest/futurerestore"
 
+  # Not using tags because s0uthwest tends to delete them
   url "https://github.com/s0uthwest/futurerestore.git",
-    tag: "222",
-    revision: "543751ae20c0260de20f96438135057e69ae77c6"
+    revision: "e9a1efd5a20c93de48c19535120d0a7af46e0e3e"
+  version "224"
 
   head "https://github.com/s0uthwest/futurerestore.git"
 
