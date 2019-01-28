@@ -6,6 +6,7 @@ class FuturerestoreS0uthwest < Formula
   url "https://github.com/s0uthwest/futurerestore.git",
     revision: "e9a1efd5a20c93de48c19535120d0a7af46e0e3e"
   version "224"
+  revision 1
 
   head "https://github.com/s0uthwest/futurerestore.git"
 
@@ -55,6 +56,6 @@ class FuturerestoreS0uthwest < Formula
 
     # we don't need libjssy.a/fragmentzip/idevicerestore.1
     # system "make", "install"
-    bin.install "futurerestore"
+    bin.install "futurerestore/futurerestore"
   end
 end
