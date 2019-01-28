@@ -1,9 +1,10 @@
 class TsscheckerS0uthwest < Formula
   desc "Tool to check tss signing status of various devices"
   homepage "https://github.com/s0uthwest/tsschecker"
+  # Not using tag because s0uthwest tends to delete tags for no reason
   url "https://github.com/s0uthwest/tsschecker.git",
-    :tag => "327",
-    :revision => "d598017bb03c5d87307dbd133c68b02e89c8163a"
+    :revision => "9be4a1cd83ba0a38082b0634b3a0ade8526f2733"
+  version "330"
 
   head "https://github.com/s0uthwest/tsschecker.git"
 
