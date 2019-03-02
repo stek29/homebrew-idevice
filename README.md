@@ -5,6 +5,7 @@ Homebrew tap with various \*OS related tools
 - [ldid]( https://cydia.saurik.com/info/ldid/ )
 - [libimobiledevice]( https://www.libimobiledevice.org/ ) (installing with --HEAD is recommended)
 - [ideviceinstaller]( https://www.libimobiledevice.org/ )
+- [usbmuxd]( https://www.libimobiledevice.org/ ) (installing with --HEAD is recommended)
 
 ## Already in homebrew-cask
 - [joker]( http://newosxbook.com/tools/joker.html )
@@ -19,23 +20,23 @@ Homebrew tap with various \*OS related tools
 
 ## Formulas in this tap
 - [fsmon]( https://github.com/nowsecure/fsmon )
-- [futurerestore-s0uthwest]( https://github.com/s0uthwest/futurerestore )
-- [futurerestore]( https://github.com/tihmstar/futurerestore )
-- [idevicerestore]( http://www.libimobiledevice.org/ )
-- [img4tool-tihmstar]( https://github.com/tihmstar/img4tool )
-- [img4tool-xerub]( https://github.com/xerub/img4tool )
+- [futurerestore-s0uthwest]( https://github.com/s0uthwest/futurerestore ) -- version 231
+- [futurerestore]( https://github.com/tihmstar/futurerestore ) -- version 156
+- [idevicerestore]( http://www.libimobiledevice.org/ ) -- version git0
+- [img4tool-tihmstar]( https://github.com/tihmstar/img4tool ) -- version 114
+- [img4tool-xerub]( https://github.com/xerub/img4tool ) -- version 0.8-retired
 - [iokit-utils]( https://github.com/Siguza/iokit-utils )
-- [iometa]( https://github.com/Siguza/iometa )
+- [iometa]( https://github.com/Siguza/iometa ) -- version git0
 - [ios-kern-utils]( https://github.com/Siguza/ios-kern-utils )
-- [ldid2]( https://github.com/xerub/ldid )
-- [libfragmentzip]( https://github.com/tihmstar/libfragmentzip )
-- [libipatcher]( https://github.com/tihmstar/libipatcher )
-- [libirecovery]( https://github.com/libimobiledevice/libirecovery )
-- [partial-zip]( https://github.com/planetbeing/partial-zip )
-- [partialzipbrowser]( https://github.com/tihmstar/partialZipBrowser )
-- [tsschecker-s0uthwest]( https://github.com/s0uthwest/tsschecker )
+- [ldid2]( https://github.com/xerub/ldid ) -- version 2.0
+- [libfragmentzip]( https://github.com/tihmstar/libfragmentzip ) -- version 42
+- [libipatcher]( https://github.com/tihmstar/libipatcher ) -- version 47
+- [libirecovery]( https://github.com/libimobiledevice/libirecovery ) -- version git0
+- [partial-zip]( https://github.com/planetbeing/partial-zip ) -- version 0.7
+- [partialzipbrowser]( https://github.com/tihmstar/partialZipBrowser ) -- version 32
+- [tsschecker-s0uthwest]( https://github.com/s0uthwest/tsschecker ) -- version 330
 - [tsschecker]( https://github.com/tihmstar/tsschecker )
-- [unsign]( http://www.woodmann.com/collaborative/tools/index.php/Unsign )
+- [unsign]( http://www.woodmann.com/collaborative/tools/index.php/Unsign ) -- version 0.10
 
 ## Requests
 - Want some other package? File an issue :)
