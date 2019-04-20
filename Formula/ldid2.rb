@@ -2,10 +2,9 @@ class Ldid2 < Formula
   desc "Unofficial ldid fork which handles sha256 signatures"
   homepage "https://github.com/xerub/ldid"
 
-  url "https://github.com/xerub/ldid.git"
+  url "https://github.com/xerub/ldid.git",
+    revision: "75a53c4a84a6d363cefd7e9dc2af1be0c44ee927"
   version "2.0"
-
-  head "https://github.com/xerub/ldid.git"
 
   depends_on "openssl"
 
