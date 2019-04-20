@@ -2,8 +2,8 @@ class Img4toolTihmstar < Formula
   desc "Tool for manipulating IMG4, IM4M and IM4P files"
   homepage "https://github.com/tihmstar/img4tool"
   url "https://github.com/tihmstar/img4tool.git",
-    :revision => "d908b92467ce783549dfbf8bb25dbe22afe074d2"
-  version "114"
+    :revision => "1bffa0e699602b4926e3a2d15e5217fba3ecb6f5"
+  version "118"
   head "https://github.com/tihmstar/img4tool.git"
 
   depends_on "pkg-config" => :build
