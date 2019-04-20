@@ -2,8 +2,8 @@ class Libfragmentzip < Formula
   desc "Library for downloading single files from a remote zip archive"
   homepage "https://github.com/tihmstar/libfragmentzip"
   url "https://github.com/tihmstar/libfragmentzip.git",
-    revision: "7f67a7a3d3380330900a293ee651abc96691dbac"
-  version "42"
+    revision: "cb3db36763f3ebbe6d9612b6b0669fefddb689f2"
+  version "45"
   head "https://github.com/tihmstar/libfragmentzip.git"
 
   depends_on "pkg-config" => :build
