@@ -9,15 +9,16 @@ class Futurerestore < Formula
 
   option "without-libipatcher", "Don't bundle libipatcher; disables Odysseus support"
 
-  depends_on "pkg-config" => :build
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
+  depends_on "pkg-config" => :build
+
+  depends_on "libfragmentzip"
+  depends_on "libimobiledevice"
+  depends_on "libirecovery"
   depends_on "libplist"
   depends_on "libzip"
-  depends_on "libimobiledevice"
-  depends_on "libfragmentzip"
-  depends_on "libirecovery"
   depends_on "libipatcher" => :optional
 
   def fix_tihmstar

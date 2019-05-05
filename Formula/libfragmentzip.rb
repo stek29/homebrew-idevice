@@ -2,14 +2,15 @@ class Libfragmentzip < Formula
   desc "Library for downloading single files from a remote zip archive"
   homepage "https://github.com/tihmstar/libfragmentzip"
   url "https://github.com/tihmstar/libfragmentzip.git",
-    revision: "cb3db36763f3ebbe6d9612b6b0669fefddb689f2"
+    :revision => "cb3db36763f3ebbe6d9612b6b0669fefddb689f2"
   version "45"
   head "https://github.com/tihmstar/libfragmentzip.git"
 
-  depends_on "pkg-config" => :build
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
+  depends_on "pkg-config" => :build
+
   depends_on "libzip"
 
   def fix_tihmstar

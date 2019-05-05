@@ -8,14 +8,15 @@ class Libipatcher < Formula
   head "https://github.com/tihmstar/libipatcher.git"
   keg_only "because I don't want this in /usr/local"
 
-  depends_on "cmake" => :build # xpwn
-  depends_on "pkg-config" => :build
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "cmake" => :build # xpwn
   depends_on "libtool" => :build
+  depends_on "pkg-config" => :build
+
   depends_on "libpng"
-  depends_on "openssl"
   depends_on "libusb"
+  depends_on "openssl"
 
   resource "xpwn" do
     url "https://github.com/tihmstar/xpwn.git"
@@ -38,6 +39,8 @@ class Libipatcher < Formula
       cp_r "includes", xpwndir
     end
   end
+
+  patch :p0, :DATA
 
   def fix_tihmstar
     if File.symlink?("COPYING")
@@ -65,8 +68,6 @@ class Libipatcher < Formula
     system "make"
     system "make", "install"
   end
-
-  patch :p0, :DATA
 end
 
 __END__

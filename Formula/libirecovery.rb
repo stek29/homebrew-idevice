@@ -4,9 +4,10 @@ class Libirecovery < Formula
   url "https://github.com/libimobiledevice/libirecovery.git"
   version "git0"
 
+  depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
-  depends_on "autoconf" => :build
+
   depends_on "libusb"
 
   def install

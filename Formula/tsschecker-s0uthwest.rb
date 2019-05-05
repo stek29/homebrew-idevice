@@ -8,13 +8,14 @@ class TsscheckerS0uthwest < Formula
 
   head "https://github.com/s0uthwest/tsschecker.git"
 
-  depends_on "pkg-config" => :build
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
-  depends_on "libplist"
+  depends_on "pkg-config" => :build
+
   depends_on "libfragmentzip"
   depends_on "libirecovery"
+  depends_on "libplist"
 
   conflicts_with "tsschecker", :because => "it's an unofficial fork"
 

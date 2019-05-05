@@ -6,10 +6,11 @@ class Img4tool < Formula
   version "118"
   head "https://github.com/tihmstar/img4tool.git"
 
-  depends_on "pkg-config" => :build
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
+  depends_on "pkg-config" => :build
+
   depends_on "libplist"
   depends_on "openssl"
 

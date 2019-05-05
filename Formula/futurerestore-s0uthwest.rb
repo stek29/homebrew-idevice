@@ -4,22 +4,23 @@ class FuturerestoreS0uthwest < Formula
 
   # Not using tags because s0uthwest tends to delete them
   url "https://github.com/s0uthwest/futurerestore.git",
-    revision: "b8af2bc72bcb54fe1e32084cad1644ef95682b84"
+    :revision => "b8af2bc72bcb54fe1e32084cad1644ef95682b84"
   version "231"
 
   head "https://github.com/s0uthwest/futurerestore.git"
 
   option "without-libipatcher", "Don't bundle libipatcher; disables Odysseus support"
 
-  depends_on "pkg-config" => :build
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
+  depends_on "pkg-config" => :build
+
+  depends_on "libfragmentzip"
+  depends_on "libimobiledevice"
+  depends_on "libirecovery"
   depends_on "libplist"
   depends_on "libzip"
-  depends_on "libimobiledevice"
-  depends_on "libfragmentzip"
-  depends_on "libirecovery"
   depends_on "libipatcher" => :optional
 
   conflicts_with "futurerestore", :because => "it's an unofficial fork"

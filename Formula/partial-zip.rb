@@ -1,9 +1,9 @@
 class PartialZip < Formula
-  desc "retrieve selected portions of ZIP files"
+  desc "Retrieve selected portions of ZIP files"
   homepage "https://github.com/planetbeing/partial-zip"
 
   url "https://github.com/planetbeing/partial-zip.git",
-    revision: "1060554ccb77ffc95de70afd3248a9142ca1715c"
+    :revision => "1060554ccb77ffc95de70afd3248a9142ca1715c"
   version "0.7"
 
   head "https://github.com/planetbeing/partial-zip.git"

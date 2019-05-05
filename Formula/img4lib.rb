@@ -3,7 +3,7 @@ class Img4lib < Formula
   homepage "https://github.com/xerub/img4lib"
 
   url "https://github.com/xerub/img4lib.git",
-    revision: "e6a7f7bda2cb209188c989500308d59d93622057"
+    :revision => "e6a7f7bda2cb209188c989500308d59d93622057"
   version "1.git-17"
 
   head "https://github.com/xerub/img4lib.git"

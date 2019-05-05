@@ -2,15 +2,16 @@ class Partialzipbrowser < Formula
   desc "Tool for zip files on remote webserver"
   homepage "https://github.com/tihmstar/partialZipBrowser"
   url "https://github.com/tihmstar/partialZipBrowser.git",
-    revision: "8c70e7ff11c3d73bf6d0047f82cb3db7e874cbfc"
+    :revision => "8c70e7ff11c3d73bf6d0047f82cb3db7e874cbfc"
   version "32"
 
-  depends_on "pkg-config" => :build
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
-  depends_on "libzip"
+  depends_on "pkg-config" => :build
+
   depends_on "libfragmentzip"
+  depends_on "libzip"
 
   def fix_tihmstar
     mkdir "m4"
