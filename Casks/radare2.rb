@@ -1,6 +1,6 @@
 cask 'radare2' do
-  version '3.3.0'
-  sha256 '65c973bdefcfb8fc368daadf9f53b2b2f26305be054f7c8525ca2b2bd7c29e40'
+  version '3.5.1'
+  sha256 '197db4400a27bb1a313c0ede7c8227c36e9e16cb9222bec28a81e578cf26d05e'
 
   # radare.mikelloc.com was verified as official when first introduced to the cask
   url "http://radare.mikelloc.com/get/#{version}/radare2-#{version}.pkg"
