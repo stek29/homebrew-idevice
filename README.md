@@ -30,6 +30,7 @@ Homebrew tap with various \*OS related tools
 - [ios-kern-utils]( https://github.com/Siguza/ios-kern-utils )
 - [ldid2]( https://github.com/xerub/ldid ) -- version 2.0
 - [libfragmentzip]( https://github.com/tihmstar/libfragmentzip ) -- version 45
+- [libideviceactivation]( https://www.libimobiledevice.org/ )
 - [libipatcher]( https://github.com/tihmstar/libipatcher ) -- version 47
 - [libirecovery]( https://github.com/libimobiledevice/libirecovery )
 - [partial-zip]( https://github.com/planetbeing/partial-zip ) -- version 0.7
