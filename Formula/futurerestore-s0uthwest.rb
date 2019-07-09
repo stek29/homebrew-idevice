@@ -4,8 +4,8 @@ class FuturerestoreS0uthwest < Formula
 
   # Not using tags because s0uthwest tends to delete them
   url "https://github.com/s0uthwest/futurerestore.git",
-    :revision => "b8af2bc72bcb54fe1e32084cad1644ef95682b84"
-  version "231"
+    :revision => "536fee9e67dbc2842b2e461bb0d23cfd0f6cf903"
+  version "246"
 
   head "https://github.com/s0uthwest/futurerestore.git"
 
