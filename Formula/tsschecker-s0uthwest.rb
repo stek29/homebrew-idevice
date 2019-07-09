@@ -3,8 +3,8 @@ class TsscheckerS0uthwest < Formula
   homepage "https://github.com/s0uthwest/tsschecker"
   # Not using tag because s0uthwest tends to delete tags for no reason
   url "https://github.com/s0uthwest/tsschecker.git",
-    :revision => "14e273bd97a02df0d135991f4d77357bf3b9a92c"
-  version "345"
+    :revision => "c0b554e83f54d39d90cac9791160bf2ccb062aed"
+  version "355"
 
   head "https://github.com/s0uthwest/tsschecker.git"
 
