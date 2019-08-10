@@ -20,24 +20,24 @@ Homebrew tap with various \*OS related tools
 
 ## Formulas in this tap
 - [fsmon]( https://github.com/nowsecure/fsmon )
-- [futurerestore-s0uthwest]( https://github.com/s0uthwest/futurerestore ) -- version 231
-- [futurerestore]( https://github.com/tihmstar/futurerestore ) -- version 156
+- [futurerestore-s0uthwest]( https://github.com/s0uthwest/futurerestore )
+- [futurerestore]( https://github.com/tihmstar/futurerestore )
 - [idevicerestore]( http://www.libimobiledevice.org/ )
-- [img4lib]( https://github.com/xerub/img4lib ) -- version 1.git-17
-- [img4tool]( https://github.com/tihmstar/img4tool ) -- version 118
+- [img4lib]( https://github.com/xerub/img4lib )
+- [img4tool]( https://github.com/tihmstar/img4tool )
 - [iokit-utils]( https://github.com/Siguza/iokit-utils )
-- [iometa]( https://github.com/Siguza/iometa ) -- version 1.3.0
+- [iometa]( https://github.com/Siguza/iometa )
 - [ios-kern-utils]( https://github.com/Siguza/ios-kern-utils )
-- [ldid2]( https://github.com/xerub/ldid ) -- version 2.0
-- [libfragmentzip]( https://github.com/tihmstar/libfragmentzip ) -- version 45
+- [ldid2]( https://github.com/xerub/ldid )
+- [libfragmentzip]( https://github.com/tihmstar/libfragmentzip )
 - [libideviceactivation]( https://www.libimobiledevice.org/ )
-- [libipatcher]( https://github.com/tihmstar/libipatcher ) -- version 47
+- [libipatcher]( https://github.com/tihmstar/libipatcher )
 - [libirecovery]( https://github.com/libimobiledevice/libirecovery )
-- [partial-zip]( https://github.com/planetbeing/partial-zip ) -- version 0.7
-- [partialzipbrowser]( https://github.com/tihmstar/partialZipBrowser ) -- version 32
-- [tsschecker-s0uthwest]( https://github.com/s0uthwest/tsschecker ) -- version 345
-- [tsschecker]( https://github.com/tihmstar/tsschecker ) -- version 263
-- [unsign]( http://www.woodmann.com/collaborative/tools/index.php/Unsign ) -- version 0.10
+- [partial-zip]( https://github.com/planetbeing/partial-zip )
+- [partialzipbrowser]( https://github.com/tihmstar/partialZipBrowser )
+- [tsschecker-s0uthwest]( https://github.com/s0uthwest/tsschecker )
+- [tsschecker]( https://github.com/tihmstar/tsschecker )
+- [unsign]( http://www.woodmann.com/collaborative/tools/index.php/Unsign )
 
 ## Requests
 - Want some other package? File an issue :)
