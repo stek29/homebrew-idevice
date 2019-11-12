@@ -2,8 +2,8 @@ class Tsschecker < Formula
   desc "Tool to check tss signing status of various devices"
   homepage "https://github.com/tihmstar/tsschecker"
   url "https://github.com/tihmstar/tsschecker.git",
-    :revision => "c77b8b993c12561d08edfe8f3345fa43591d1fd4"
-  version "278"
+    :revision => "0a2348f540c0e9be4f50f26493105ceb3154d479"
+  version "300"
 
   head "https://github.com/tihmstar/tsschecker.git"
 
