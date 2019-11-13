@@ -46,8 +46,8 @@ class Libipatcher < Formula
   patch :p0, :DATA
 
   def fix_tihmstar
-    rm "LICENSE", "COPYING"
-    touch "LICENSE", "COPYING"
+    touch "LICENSE"
+    touch "COPYING"
 
     files = %w[setBuildVersion.sh autogen.sh configure.ac]
     inreplace files.select { |f| File.exist? f },
