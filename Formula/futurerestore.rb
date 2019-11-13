@@ -14,6 +14,7 @@ class Futurerestore < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
+  depends_on "img4tool"
   depends_on "libfragmentzip"
   depends_on "libimobiledevice"
   depends_on "libirecovery"

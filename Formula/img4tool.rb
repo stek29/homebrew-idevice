@@ -2,8 +2,8 @@ class Img4tool < Formula
   desc "Tool for manipulating IMG4, IM4M and IM4P files"
   homepage "https://github.com/tihmstar/img4tool"
   url "https://github.com/tihmstar/img4tool.git",
-    :revision => "29f25cb4053376b83393a7f365e15767e75d3fab"
-  version "122"
+    :revision => "c3df16cb998d5013aef092baeb71908475366182"
+  version "163"
   head "https://github.com/tihmstar/img4tool.git"
 
   depends_on "autoconf" => :build
@@ -11,6 +11,7 @@ class Img4tool < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
+  depends_on "libgeneral"
   depends_on "libplist"
   depends_on "openssl"
 
@@ -36,6 +37,6 @@ class Img4tool < Formula
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
     system "make"
-    bin.install "img4tool/img4tool"
+    system "make", "install"
   end
 end
