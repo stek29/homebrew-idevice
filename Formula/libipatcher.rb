@@ -16,6 +16,7 @@ class Libipatcher < Formula
 
   depends_on "img4tool"
   depends_on "libgeneral"
+  depends_on "liboffsetfinder64"
   depends_on "libpng"
   depends_on "libusb"
   depends_on "openssl"
