@@ -18,6 +18,7 @@ class Futurerestore < Formula
   depends_on "libfragmentzip"
   depends_on "libimobiledevice"
   depends_on "libirecovery"
+  depends_on "liboffsetfinder64"
   depends_on "libplist"
   depends_on "libzip"
   depends_on "libipatcher" => :optional
