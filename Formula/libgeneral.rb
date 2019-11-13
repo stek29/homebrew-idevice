@@ -12,8 +12,11 @@ class Libgeneral < Formula
   depends_on "pkg-config" => :build
 
   def fix_tihmstar
-    mkdir "m4"
-    cp "LICENSE", "COPYING"
+    if File.symlink?("COPYING")
+      rm "COPYING"
+      touch "LICENSE"
+      cp "LICENSE", "COPYING"
+    end
 
     files = %w[configure.ac]
     inreplace files.select { |f| File.exist? f },
