@@ -14,6 +14,7 @@ class Libipatcher < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
+  depends_on "img4tool"
   depends_on "libgeneral"
   depends_on "libpng"
   depends_on "libusb"
