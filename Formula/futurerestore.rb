@@ -2,8 +2,8 @@ class Futurerestore < Formula
   desc "Hacked up idevicerestore wrapper"
   homepage "https://github.com/tihmstar/futurerestore"
   url "https://github.com/tihmstar/futurerestore.git",
-    :revision => "4a8cabbe556d264df17379372f01f0523ba8d6c4"
-  version "156"
+    :revision => "265c1bbca07b924f2f03a315983f7d23094cca35"
+  version "171"
 
   head "https://github.com/tihmstar/futurerestore.git"
 

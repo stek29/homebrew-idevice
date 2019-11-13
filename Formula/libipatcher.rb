@@ -2,8 +2,8 @@ class Libipatcher < Formula
   desc "Convinient wrapper for iBoot32Patcher"
   homepage "https://github.com/tihmstar/libipatcher"
   url "https://github.com/tihmstar/libipatcher.git",
-    :revision => "37c38e3ab3390c96ae26d08aa4330771aca20ea2"
-  version "47"
+    :revision => "80df8700f52e6eb8777a28bfcc19f86da7d9b9b9"
+  version "68"
 
   head "https://github.com/tihmstar/libipatcher.git"
   keg_only "because I don't want this in /usr/local"
