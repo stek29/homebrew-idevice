@@ -6,7 +6,7 @@ class Libipatcher < Formula
   version "68"
 
   head "https://github.com/tihmstar/libipatcher.git"
-  keg_only "because I don't want this in /usr/local"
+  keg_only "I don't want this in /usr/local"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
@@ -49,11 +49,11 @@ class Libipatcher < Formula
     touch "LICENSE"
     touch "COPYING"
 
-    files = %w[setBuildVersion.sh autogen.sh configure.ac]
+    files = %w[libipatcher.pc.in]
     inreplace files.select { |f| File.exist? f },
-      "$(git rev-list --count HEAD)",
-      version.to_s.gsub(/[^\d]/, ""),
-      false
+      "@VERSION_COMMIT_COUNT@",
+#     `git rev-list --count HEAD`  | I have no idea how to make this work.
+      "68"
   end
 
   def install
