@@ -51,9 +51,11 @@ class Libipatcher < Formula
 
     files = %w[libipatcher.pc.in]
     inreplace files.select { |f| File.exist? f },
+#     "git rev-list --count HEAD",
+#     "echo #{version.to_s.gsub(/[^\d]/, "")}",
+#     false
       "@VERSION_COMMIT_COUNT@",
-#     `git rev-list --count HEAD`  | I have no idea how to make this work.
-      "68"
+      "68"                      # I don't know enough Ruby nor regex to be able to make this work.
   end
 
   def install
