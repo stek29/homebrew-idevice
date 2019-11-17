@@ -11,6 +11,7 @@ class Libfragmentzip < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
+  depends_on "libgeneral"
   depends_on "libzip"
 
   def fix_tihmstar
