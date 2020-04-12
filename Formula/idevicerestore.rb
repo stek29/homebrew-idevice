@@ -11,7 +11,6 @@ class Idevicerestore < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
-  depends_on "libfragmentzip"
   depends_on "libimobiledevice"
   depends_on "libirecovery"
   depends_on "libplist"
