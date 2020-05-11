@@ -20,7 +20,6 @@ Homebrew tap with various \*OS related tools
 
 ## Formulas in this tap
 - [fsmon]( https://github.com/nowsecure/fsmon )
-- [futurerestore-s0uthwest]( https://github.com/s0uthwest/futurerestore )
 - [futurerestore]( https://github.com/tihmstar/futurerestore )
 - [idevicerestore]( http://www.libimobiledevice.org/ )
 - [img4lib]( https://github.com/xerub/img4lib )
@@ -35,7 +34,6 @@ Homebrew tap with various \*OS related tools
 - [libirecovery]( https://github.com/libimobiledevice/libirecovery )
 - [partial-zip]( https://github.com/planetbeing/partial-zip )
 - [partialzipbrowser]( https://github.com/tihmstar/partialZipBrowser )
-- [tsschecker-s0uthwest]( https://github.com/s0uthwest/tsschecker )
 - [tsschecker]( https://github.com/tihmstar/tsschecker )
 - [unsign]( http://www.woodmann.com/collaborative/tools/index.php/Unsign )
 

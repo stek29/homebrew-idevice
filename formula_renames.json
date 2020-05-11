@@ -1,6 +1,8 @@
 {
   "tsschecker-encounter": "tsschecker-s0uthwest",
   "futurerestore-encounter": "futurerestore-s0uthwest",
+  "tsschecker-s0uthwest": "tsschecker",
+  "futurerestore-s0uthwest": "futurerestore",
   "img4tool-tihm": "img4tool-tihmstar",
   "img4tool-xerub": "img4lib",
   "img4tool-tihmstar": "img4tool"
