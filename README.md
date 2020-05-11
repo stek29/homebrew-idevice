@@ -32,6 +32,7 @@ Homebrew tap with various \*OS related tools
 - [libideviceactivation]( https://www.libimobiledevice.org/ )
 - [libipatcher]( https://github.com/tihmstar/libipatcher )
 - [libirecovery]( https://github.com/libimobiledevice/libirecovery )
+- [libtihmstargeneral]( https://github.com/tihmstar/libgeneral )
 - [partial-zip]( https://github.com/planetbeing/partial-zip )
 - [partialzipbrowser]( https://github.com/tihmstar/partialZipBrowser )
 - [tsschecker]( https://github.com/tihmstar/tsschecker )
