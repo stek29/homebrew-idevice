@@ -2,8 +2,7 @@ class Libfragmentzip < Formula
   desc "Library for downloading single files from a remote zip archive"
   homepage "https://github.com/tihmstar/libfragmentzip"
   url "https://github.com/tihmstar/libfragmentzip.git",
-    :revision => "7951fa1e40415a630cd2d4401b2ebb261b0a46a2"
-  version "53"
+    :tag => "60"
   head "https://github.com/tihmstar/libfragmentzip.git"
 
   depends_on "autoconf" => :build
@@ -12,13 +11,10 @@ class Libfragmentzip < Formula
   depends_on "pkg-config" => :build
 
   depends_on "libzip"
+  depends_on "libtihmstargeneral"
 
   def fix_tihmstar
-    mkdir "m4"
-    cp "LICENSE", "COPYING"
-
-    files = %w[configure.ac]
-    inreplace files.select { |f| File.exist? f },
+    inreplace %w[configure.ac],
       "git rev-list --count HEAD",
       "echo #{version.to_s.gsub(/[^\d]/, "")}",
       false
