@@ -8,7 +8,7 @@ class Img4lib < Formula
 
   head "https://github.com/xerub/img4lib.git"
 
-  depends_on "openssl"
+  depends_on "openssl@1.1"
 
   def install
     system "make"

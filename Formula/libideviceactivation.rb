@@ -13,7 +13,7 @@ class Libideviceactivation < Formula
 
   depends_on "libimobiledevice"
   depends_on "libplist"
-  depends_on "usbmuxd"
+  depends_on "libusbmuxd"
 
   def install
     system "./autogen.sh", "--disable-debug",

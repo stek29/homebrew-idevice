@@ -1,5 +1,5 @@
 class Libtihmstargeneral < Formula
-  desc "tihmstar's general stuff for projects"
+  desc "General general stuff for tihmstar's projects"
   homepage "https://github.com/tihmstar/libgeneral"
   url "https://github.com/tihmstar/libgeneral.git",
     :tag => "31"
