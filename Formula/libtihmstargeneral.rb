@@ -5,6 +5,8 @@ class Libtihmstargeneral < Formula
     :tag => "31"
   head "https://github.com/tihmstar/img4tool.git"
 
+  keg_only "its an utility library for tihmstar's projects and shouldnt be used by anything else"
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
