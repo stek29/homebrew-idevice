@@ -33,6 +33,7 @@ Homebrew tap with various \*OS related tools
 - [libipatcher]( https://github.com/tihmstar/libipatcher )
 - [libirecovery]( https://github.com/libimobiledevice/libirecovery )
 - [libtihmstar-general]( https://github.com/tihmstar/libgeneral )
+- [libtihmstar-offsetfinder64]( https://github.com/tihmstar/liboffsetfinder64 )
 - [partial-zip]( https://github.com/planetbeing/partial-zip )
 - [partialzipbrowser]( https://github.com/tihmstar/partialZipBrowser )
 - [tsschecker]( https://github.com/tihmstar/tsschecker )
