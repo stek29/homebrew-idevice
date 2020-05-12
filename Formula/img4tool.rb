@@ -11,7 +11,7 @@ class Img4tool < Formula
   depends_on "pkg-config" => :build
 
   depends_on "libplist"
-  depends_on "libtihmstargeneral"
+  depends_on "libtihmstar-general"
   depends_on "openssl@1.1"
 
   def fix_tihmstar

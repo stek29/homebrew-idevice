@@ -1,4 +1,4 @@
-class Libtihmstargeneral < Formula
+class LibtihmstarGeneral < Formula
   desc "General general stuff for tihmstar's projects"
   homepage "https://github.com/tihmstar/libgeneral"
   url "https://github.com/tihmstar/libgeneral.git",

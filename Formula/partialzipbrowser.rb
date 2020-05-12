@@ -10,7 +10,7 @@ class Partialzipbrowser < Formula
   depends_on "pkg-config" => :build
 
   depends_on "libfragmentzip"
-  depends_on "libtihmstargeneral"
+  depends_on "libtihmstar-general"
 
   def fix_tihmstar
     inreplace %w[configure.ac],
