@@ -2,8 +2,8 @@ class Futurerestore < Formula
   desc "Hacked up idevicerestore wrapper"
   homepage "https://github.com/tihmstar/futurerestore"
   url "https://github.com/tihmstar/futurerestore.git",
-    :revision => "4a8cabbe556d264df17379372f01f0523ba8d6c4"
-  version "156"
+    :revision => "88861b6128b7ae736bad4880e07f9026e025a537"
+  version "182"
 
   head "https://github.com/tihmstar/futurerestore.git"
 
@@ -14,6 +14,7 @@ class Futurerestore < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
+  depends_on "img4tool"
   depends_on "libfragmentzip"
   depends_on "libimobiledevice"
   depends_on "libirecovery"
@@ -22,16 +23,11 @@ class Futurerestore < Formula
   depends_on "libipatcher" => :optional
 
   def fix_tihmstar
-    if File.symlink?("COPYING")
-      rm "COPYING"
-      touch "LICENSE"
-      cp "LICENSE", "COPYING"
-    end
+    File.symlink "LICENSE", "COPYING"
 
-    files = %w[setBuildVersion.sh autogen.sh configure.ac]
-    inreplace files.select { |f| File.exist? f },
-      "$(git rev-list --count HEAD)",
-      version.to_s.gsub(/[^\d]/, ""),
+    inreplace %w[configure.ac],
+      "git rev-list --count HEAD",
+      "echo #{version.to_s.gsub(/[^\d]/, "")}",
       false
   end
 
