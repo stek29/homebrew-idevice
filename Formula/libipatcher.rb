@@ -2,10 +2,9 @@ class Libipatcher < Formula
   desc "Convinient wrapper for iBoot32Patcher"
   homepage "https://github.com/tihmstar/libipatcher"
   url "https://github.com/tihmstar/libipatcher.git",
-    :revision => "37c38e3ab3390c96ae26d08aa4330771aca20ea2"
-  version "47"
-
+    :tag => "71"
   head "https://github.com/tihmstar/libipatcher.git"
+
   keg_only "because I don't want this in /usr/local"
 
   depends_on "autoconf" => :build
@@ -14,12 +13,17 @@ class Libipatcher < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
+  depends_on "img4tool"
+  depends_on "libplist"
   depends_on "libpng"
-  depends_on "libusb"
-  depends_on "openssl"
+  depends_on "libtihmstar-general"
+  depends_on "libtihmstar-offsetfinder64"
+  depends_on "libzip"
+  depends_on "openssl@1.1"
 
   resource "xpwn" do
-    url "https://github.com/tihmstar/xpwn.git"
+    url "https://github.com/tihmstar/xpwn/archive/76742fc7b0ea556f005058274e9b69f40c56aef7.zip"
+    sha256 "e5edb87f1b2d6d68d83ffa56adeb05bf059153e0b3bcdf6dd4b795ddb44b1d78"
   end
 
   def build_libxpwn
@@ -28,6 +32,9 @@ class Libipatcher < Formula
 
     resource("xpwn").stage do
       inreplace "ipsw-patch/CMakeLists.txt", "powerpc-apple-darwin8-libtool", "libtool"
+
+      # OpenSSL 1.1.0 fix
+      inreplace "includes/dmg/filevault.h", "HMAC_CTX", "HMAC_CTX *"
 
       mkdir "builddir" do
         system "cmake", "..", *std_cmake_args
@@ -40,25 +47,19 @@ class Libipatcher < Formula
     end
   end
 
+  # To add xpwndir to include/lib paths
   patch :p0, :DATA
 
   def fix_tihmstar
-    if File.symlink?("COPYING")
-      rm "COPYING"
-      touch "LICENSE"
-      cp "LICENSE", "COPYING"
-    end
-
-    files = %w[setBuildVersion.sh autogen.sh configure.ac]
-    inreplace files.select { |f| File.exist? f },
-      "$(git rev-list --count HEAD)",
-      version.to_s.gsub(/[^\d]/, ""),
+    File.symlink "LICENSE", "COPYING"
+    inreplace %w[configure.ac],
+      "git rev-list --count HEAD",
+      "echo #{version.to_s.gsub(/[^\d]/, "")}",
       false
   end
 
   def install
     fix_tihmstar
-
     build_libxpwn
 
     system "./autogen.sh", "--disable-debug",
@@ -66,7 +67,7 @@ class Libipatcher < Formula
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
     system "make"
-    system "make", "install"
+    system "make", "install", "PREFIX=#{prefix}"
   end
 end
 
@@ -75,8 +76,8 @@ diff --git libipatcher/Makefile.am libipatcher/Makefile.am
 --- libipatcher/Makefile.am
 +++ libipatcher/Makefile.am
 @@ -1,6 +1,9 @@
- AM_CFLAGS = -I$(top_srcdir)/include -I$(top_srcdir)/external/iBoot32Patcher -I$(top_srcdir)/external/jssy/jssy/ $(libpng_CFLAGS)
- AM_LDFLAGS = -L$(top_srcdir)/libipatcher -L/usr/local/lib/ -lcommon -lxpwn $(libpng_LIBS) $(openssl_LIBS)
+ AM_CFLAGS = -I$(top_srcdir)/include -I$(top_srcdir)/external/iBoot32Patcher -I$(top_srcdir)/external/jssy/jssy/ $(libpng_CFLAGS) $(openssl_CFLAGS) $(libimg4tool_CFLAGS) $(liboffsetfinder64_CFLAGS) $(libgeneral_CFLAGS)
+ AM_LDFLAGS = -L$(top_srcdir)/libipatcher -L/usr/local/lib/ -lcommon -lxpwn $(libpng_LIBS) $(openssl_LIBS) $(libimg4tool_LIBS) $(liboffsetfinder64_LIBS) $(libgeneral_LIBS)
 
 +AM_CFLAGS += -I$(includedir) -I$(top_srcdir)/external/xpwn/includes
 +AM_LDFLAGS += -L$(libdir) -L$(top_srcdir)/external/xpwn
