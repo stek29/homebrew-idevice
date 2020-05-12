@@ -22,8 +22,8 @@ class Libipatcher < Formula
   depends_on "openssl@1.1"
 
   resource "xpwn" do
-    url "https://github.com/tihmstar/xpwn/archive/76742fc7b0ea556f005058274e9b69f40c56aef7.zip"
-    sha256 "e5edb87f1b2d6d68d83ffa56adeb05bf059153e0b3bcdf6dd4b795ddb44b1d78"
+    url "https://github.com/tihmstar/xpwn/archive/76742fc7b0ea556f005058274e9b69f40c56aef7.tar.gz"
+    sha256 "17574e8d886373f7d3f175ab92f7c40613724793a4fc11f4f60ce149ae770ca9"
   end
 
   def build_libxpwn
