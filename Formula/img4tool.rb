@@ -30,6 +30,6 @@ class Img4tool < Formula
                           "--prefix=#{prefix}"
 
     system "make"
-    bin.install "img4tool/img4tool"
+    system "make", "install", "PREFIX=#{prefix}"
   end
 end
