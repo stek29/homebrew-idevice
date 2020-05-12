@@ -2,8 +2,8 @@ class Tsschecker < Formula
   desc "Tool to check tss signing status of various devices"
   homepage "https://github.com/tihmstar/tsschecker"
   url "https://github.com/tihmstar/tsschecker.git",
-    :revision => "0a2348f540c0e9be4f50f26493105ceb3154d479"
-  version "300"
+    :revision => "fea67caa58f492b86fbab298e3329dbf5ff835fb"
+  version "305"
 
   head "https://github.com/tihmstar/tsschecker.git"
 
@@ -17,16 +17,9 @@ class Tsschecker < Formula
   depends_on "libplist"
 
   def fix_tihmstar
-    if File.symlink?("COPYING")
-      rm "COPYING"
-      touch "LICENSE"
-      cp "LICENSE", "COPYING"
-    end
-
-    files = %w[setBuildVersion.sh autogen.sh configure.ac]
-    inreplace files.select { |f| File.exist? f },
-      "$(git rev-list --count HEAD)",
-      version.to_s.gsub(/[^\d]/, ""),
+    inreplace %w[configure.ac],
+      "git rev-list --count HEAD",
+      "echo #{version.to_s.gsub(/[^\d]/, "")}",
       false
   end
 
@@ -38,9 +31,8 @@ class Tsschecker < Formula
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
     system "make"
-    # No, thanks, we dont need libjssy
-    # system "make", "install"
-    # rm_rf "#{lib}/libjssy.a"
+
+    # we dont need libjssy
     bin.install "tsschecker/tsschecker" => "tsschecker"
   end
 end
