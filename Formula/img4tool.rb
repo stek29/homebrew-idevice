@@ -16,8 +16,8 @@ class Img4tool < Formula
 
   def fix_tihmstar
     inreplace %w[configure.ac],
-      "$(git rev-list --count HEAD)",
-      version.to_s.gsub(/[^\d]/, ""),
+      "git rev-list --count HEAD",
+      "echo #{version.to_s.gsub(/[^\d]/, "")}",
       false
   end
 
