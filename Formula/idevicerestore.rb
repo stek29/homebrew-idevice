@@ -14,6 +14,7 @@ class Idevicerestore < Formula
   depends_on "libimobiledevice"
   depends_on "libirecovery"
   depends_on "libplist"
+  depends_on "libzip"
 
   def install
     system "./autogen.sh", "--disable-debug",
