@@ -9,7 +9,6 @@ class DyldExtractor < Formula
   def install
     system "grep \"// test\" -A 34 launch-cache/dsc_extractor.cpp > extract.cpp"
     system "clang++ -o dsc_extractor extract.cpp"
-    system "chmod +x dsc_extractor"
     bin.install "dsc_extractor"
   end
 
