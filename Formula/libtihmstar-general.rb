@@ -2,7 +2,7 @@ class LibtihmstarGeneral < Formula
   desc "General general stuff for tihmstar's projects"
   homepage "https://github.com/tihmstar/libgeneral"
   url "https://github.com/tihmstar/libgeneral.git",
-    :tag => "31"
+    :tag => "43"
   head "https://github.com/tihmstar/img4tool.git"
 
   keg_only "its an utility library for tihmstar's projects and shouldnt be used by anything else"
