@@ -2,7 +2,7 @@ class Img4tool < Formula
   desc "Tool for manipulating IMG4, IM4M and IM4P files"
   homepage "https://github.com/tihmstar/img4tool"
   url "https://github.com/tihmstar/img4tool.git",
-    :tag => "182"
+    :tag => "195"
   head "https://github.com/tihmstar/img4tool.git"
 
   depends_on "autoconf" => :build
