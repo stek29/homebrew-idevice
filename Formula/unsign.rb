@@ -1,9 +1,10 @@
 class Unsign < Formula
-  desc "Remove code signatures from OSX Mach-O binaries"
+  desc "Remove code signatures from Mach-O binaries"
   homepage "http://www.woodmann.com/collaborative/tools/index.php/Unsign"
   url "https://github.com/steakknife/unsign.git",
     revision: "37151232e3a3186dc60a33c920c60044aa044788"
   version "0.11"
+  license "ISC"
   head "https://github.com/steakknife/unsign.git"
 
   livecheck do
