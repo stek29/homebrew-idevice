@@ -42,6 +42,7 @@ Homebrew tap with various \*OS related tools
 - [libtihmstar-general]( https://github.com/tihmstar/libgeneral )
 - [libtihmstar-offsetfinder64]( https://github.com/tihmstar/liboffsetfinder64 )
 - [libusbmuxd]( https://github.com/libimobiledevice/libusbmuxd )
+- [openssl@1.0]( https://openssl.org/ )
 - [partial-zip]( https://github.com/planetbeing/partial-zip )
 - [partialzipbrowser]( https://github.com/tihmstar/partialZipBrowser )
 - [tsschecker]( https://github.com/1Conan/tsschecker ) - 1Conan's fork
