@@ -1,8 +1,8 @@
 class Iometa < Formula
   desc "Just another IOKit class dumper"
   homepage "https://github.com/Siguza/iometa"
-  url "https://github.com/Siguza/iometa/archive/1.3.1.tar.gz"
-  sha256 "31dd7bda4bbcf6d8fe6070143bff7bb84269304066e7ae232a075d613eadf8bb"
+  url "https://github.com/Siguza/iometa/archive/1.6.6.tar.gz"
+  sha256 "147c88729d897e78688ab969ffb009426d9f1e21895bab6e4e54baed4699dd30"
 
   def install
     system "make"
