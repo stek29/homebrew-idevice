@@ -1,8 +1,8 @@
 class Fsmon < Formula
   desc "FileSystem events Monitor"
-  homepage "https://github.com/nowsecure/fsmon"
-  url "https://github.com/nowsecure/fsmon/archive/1.7.0.tar.gz"
-  sha256 "b2bb279d50db4103450a1c755d0581116884bacccce1b7a9deef2de0f418fffd"
+  homepage "https://github.com/nowsecure/fsmon.git"
+  url "https://github.com/nowsecure/fsmon/archive/1.8.5.tar.gz"
+  sha256 "eb99cfb242bea9fc5bde66e67f4324bd71100d17b1672e4e52db14b9a5e2900a"
 
   def install
     system "make", "osx"
