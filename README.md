@@ -6,6 +6,7 @@ Homebrew tap with various \*OS related tools
 - [ldid]( https://cydia.saurik.com/info/ldid/ )
 - [libimobiledevice]( https://www.libimobiledevice.org/ ) - outdated because upstream has no releases
 - [libirecovery]( https://www.libimobiledevice.org/ ) - outdated because upstream has no releases
+- [libplist]( https://www.libimobiledevice.org/ ) - outdated because upstream has no releases
 - [radare2]( https://rada.re )
 - [rizin]( https://rizin.re )
 - [usbmuxd]( https://www.libimobiledevice.org/ ) (installing with --HEAD is recommended)
@@ -36,6 +37,7 @@ Homebrew tap with various \*OS related tools
 - [libimobiledevice]( https://github.com/libimobiledevice/libimobiledevice )
 - [libipatcher]( https://github.com/tihmstar/libipatcher )
 - [libirecovery]( https://github.com/libimobiledevice/libirecovery )
+- [libplist]( https://github.com/libimobiledevice/libplist )
 - [libtihmstar-general]( https://github.com/tihmstar/libgeneral )
 - [libtihmstar-offsetfinder64]( https://github.com/tihmstar/liboffsetfinder64 )
 - [partial-zip]( https://github.com/planetbeing/partial-zip )
