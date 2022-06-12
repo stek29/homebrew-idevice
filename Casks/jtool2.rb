@@ -4,7 +4,8 @@ cask 'jtool2' do
 
   url 'http://www.newosxbook.com/tools/jtool2.tgz'
   name 'jtool2'
-  homepage 'http://newosxbook.com/forum/viewtopic.php?f=3&t=19577'
+  desc 'Taking the O out of otool(1), and so much more'
+  homepage 'http://www.newosxbook.com/tools/jtool.html'
 
   binary 'jtool2'
 end
