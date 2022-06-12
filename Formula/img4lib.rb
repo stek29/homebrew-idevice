@@ -1,5 +1,5 @@
 class Img4lib < Formula
-  desc "WIP code to deal with img4 files in a decent manner"
+  desc "Some WIP to deal with img4 files in a decent manner"
   homepage "https://github.com/xerub/img4lib"
 
   url "https://github.com/xerub/img4lib.git",
