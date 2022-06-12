@@ -1,5 +1,5 @@
 class Idevicerestore < Formula
-  desc "Restore/upgrade firmware of iOS devices"
+  desc "Restore firmware files to iOS devices"
   homepage "https://www.libimobiledevice.org/"
   url "https://github.com/libimobiledevice/idevicerestore.git",
     revision: "f80a876b3598de4eb551bafcb279947c527fae33"
@@ -11,7 +11,7 @@ class Idevicerestore < Formula
     skip "upstream has inconsistent tags"
   end
 
-  keg_only "to avoid conflicts with homebrew/core"
+  keg_only "it can conflict with homebrew/core"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
