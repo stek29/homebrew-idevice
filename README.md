@@ -17,6 +17,7 @@ Homebrew tap with various \*OS related tools
 - [supraudit]( http://newosxbook.com/tools/supraudit.html )
 - [jtool2]( http://newosxbook.com/forum/viewtopic.php?f=3&t=19577 )
 - [radare2]( https://rada.re )
+- [rizin]( https://rizin.re )
 
 ## Formulas in this tap
 - [fsmon]( https://github.com/nowsecure/fsmon )
