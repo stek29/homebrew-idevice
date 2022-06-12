@@ -13,6 +13,14 @@ class LibtihmstarGeneral < Formula
     regex(%r{<strong>(\d+)</strong>\s*<span aria-label="Commits}im)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/stek29/idevice"
+    rebuild 1
+    sha256 cellar: :any, monterey: "60fd57a3f45f5dfb2c50ab91bce96559221f0aa5f3c207ed1e443065cbe57f0a"
+    sha256 cellar: :any, big_sur:  "a38e775d660531e528093d0556247b5c673eb763a02c7ef1aeb7c90509da863c"
+    sha256 cellar: :any, catalina: "1c1fb4a3e9822881962a743e61b0023998cb566823ddaf89b7c31c4d6756026f"
+  end
+
   keg_only "its an utility library for tihmstar's projects and shouldnt be used by anything else"
 
   depends_on "autoconf" => :build
