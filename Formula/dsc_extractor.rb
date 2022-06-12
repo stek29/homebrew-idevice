@@ -17,7 +17,12 @@ class DscExtractor < Formula
     inreplace src,
       /.*\n#if 0/m,
       "#if 1"
-    system ENV.cc.to_s, "-o", "dsc_extractor", src
+    system ENV.cxx.to_s, "-o", "dsc_extractor", src
     bin.install "dsc_extractor"
+  end
+
+  test do
+    assert_equal "usage: dsc_extractor <path-to-cache-file> <path-to-device-dir>\n",
+      shell_output("#{bin}/dsc_extractor 2>&1", 1)
   end
 end
