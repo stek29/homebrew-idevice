@@ -4,13 +4,14 @@ class Libusbmuxd < Formula
   url "https://github.com/libimobiledevice/libusbmuxd.git",
     revision: "36ffb7ab6e2a7e33bd1b56398a88895b7b8c615a"
   version "2.0.2-24-g36ffb7a"
+  license "LGPL-2.1-or-later"
   head "https://github.com/libimobiledevice/libusbmuxd.git"
 
   livecheck do
     skip "upstream has inconsistent tags"
   end
 
-  keg_only "to avoid conflicts with homebrew/core"
+  keg_only "it can conflict with homebrew/core"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
