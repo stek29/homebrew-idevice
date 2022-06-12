@@ -31,6 +31,7 @@ Homebrew tap with various \*OS related tools
 - [ldid2]( https://github.com/xerub/ldid )
 - [libfragmentzip]( https://github.com/tihmstar/libfragmentzip )
 - [libideviceactivation]( https://www.libimobiledevice.org/ )
+- [libimobiledevice-glue]( https://github.com/libimobiledevice/libimobiledevice-glue )
 - [libipatcher]( https://github.com/tihmstar/libipatcher )
 - [libirecovery]( https://github.com/libimobiledevice/libirecovery )
 - [libtihmstar-general]( https://github.com/tihmstar/libgeneral )
