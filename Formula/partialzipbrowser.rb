@@ -13,6 +13,14 @@ class Partialzipbrowser < Formula
     regex(%r{<strong>(\d+)</strong>\s*<span aria-label="Commits}im)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/stek29/idevice"
+    rebuild 1
+    sha256 cellar: :any, monterey: "6832d6da9fb54db8037a869e6e814fc5c240eb94292b2d25fce2307b8a055a89"
+    sha256 cellar: :any, big_sur:  "37e508636f240f8d33ee8389aa62ec5fa6b2c70ca51ac5dca88f823863aceb0a"
+    sha256 cellar: :any, catalina: "5220440d9d71fc637e1bf95fa0a3f175791163d1d9dd05b5e34da28771518441"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
