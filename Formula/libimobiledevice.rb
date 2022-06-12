@@ -9,7 +9,7 @@ class Libimobiledevice < Formula
     skip "upstream has inconsistent tags"
   end
 
-  keg_only "to avoid conflicts with homebrew/core"
+  keg_only "it can conflict with homebrew/core"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
