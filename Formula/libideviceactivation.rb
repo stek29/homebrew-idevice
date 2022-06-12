@@ -1,8 +1,13 @@
 class Libideviceactivation < Formula
   desc "Library handle the activation process of iOS devices"
   homepage "https://www.libimobiledevice.org/"
-  url "https://github.com/libimobiledevice/libideviceactivation/archive/1.1.0.tar.gz"
-  sha256 "17fb29a285327aecf33b701a4fa3e1193bd63cabd06cae7121cf870756b75720"
+  url "https://github.com/libimobiledevice/libideviceactivation.git",
+    :revision => "75505b75816691e1ff651fb55bfc6aaa7170ba3f"
+  version "1.1.1-12-g75505b7"
+
+  livecheck do
+    skip "upstream has inconsistent tags"
+  end
 
   head "https://github.com/libimobiledevice/libideviceactivation.git"
 
