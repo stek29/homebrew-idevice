@@ -35,6 +35,7 @@ Homebrew tap with various \*OS related tools
 - [libideviceactivation]( https://www.libimobiledevice.org/ )
 - [libimobiledevice-glue]( https://github.com/libimobiledevice/libimobiledevice-glue )
 - [libimobiledevice]( https://github.com/libimobiledevice/libimobiledevice )
+- [libinsn]( https://github.com/tihmstar/libinsn ) 
 - [libipatcher]( https://github.com/tihmstar/libipatcher )
 - [libirecovery]( https://github.com/libimobiledevice/libirecovery )
 - [libplist]( https://github.com/libimobiledevice/libplist )
