@@ -13,6 +13,14 @@ class Libfragmentzip < Formula
     regex(%r{<strong>(\d+)</strong>}im)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/stek29/idevice"
+    rebuild 1
+    sha256 cellar: :any, monterey: "7edf7681ecc2b0181cede6640517c5c85a55ed90bdc3b1313bdfb895cf3d61e1"
+    sha256 cellar: :any, big_sur:  "3345b18573cc36116bac45e503fbc06711b675da9db610dd5accf9c6ac86b32c"
+    sha256 cellar: :any, catalina: "cb9f8d611c6726d009e546658edf936a266b03270ef63587b30f497b72d1f364"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
