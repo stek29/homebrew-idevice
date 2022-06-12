@@ -11,6 +11,14 @@ class Libirecovery < Formula
     skip "upstream has inconsistent tags"
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/stek29/idevice"
+    rebuild 1
+    sha256 cellar: :any, monterey: "bd24639530e333093b710a23864abeff5aa425690d4e5f6c2f4f4593e0cc17ab"
+    sha256 cellar: :any, big_sur:  "8b761c648eb1b0b738b4f9686b2e24542dc1ee87c0fd9540bc258e9ed4c950a0"
+    sha256 cellar: :any, catalina: "20cb02a9f6b296a04e6465bf1f17461e19366615b82cf1974ce4c654961dbf95"
+  end
+
   keg_only "it can conflict with homebrew/core"
 
   depends_on "autoconf" => :build
