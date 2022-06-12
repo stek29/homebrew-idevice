@@ -4,12 +4,14 @@ class Libimobiledevice < Formula
   url "https://github.com/libimobiledevice/libimobiledevice.git",
     revision: "93c25b7846179c397a5316fb4fecb31ceff0ec2f"
   version "1.3.0-158-g93c25b7"
+  license "LGPL-2.1-or-later"
+  head "https://github.com/libimobiledevice/libimobiledevice.git"
 
   livecheck do
     skip "upstream has inconsistent tags"
   end
 
-  keg_only "to avoid conflicts with homebrew/core"
+  keg_only "it can conflict with homebrew/core"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
