@@ -1,10 +1,10 @@
 class Libipatcher < Formula
   desc "Convinient wrapper for iBoot32Patcher"
-  homepage "https://github.com/tihmstar/libipatcher"
-  url "https://github.com/tihmstar/libipatcher.git",
-    revision: "0b2f79ff0917ef9b8a92475d93d9466b23fc2322"
-  version "82"
-  head "https://github.com/tihmstar/libipatcher.git"
+  homepage "https://github.com/Cryptiiiic/libipatcher"
+  url "https://github.com/Cryptiiiic/libipatcher.git",
+    revision: "1e855d70c84419014e363bdbcaead7b145fe3e1f"
+  version "88"
+  head "https://github.com/Cryptiiiic/libipatcher.git"
 
   livecheck do
     url :homepage
@@ -29,8 +29,8 @@ class Libipatcher < Formula
   depends_on "stek29/idevice/libplist"
 
   resource "xpwn" do
-    url "https://github.com/tihmstar/xpwn/archive/76742fc7b0ea556f005058274e9b69f40c56aef7.tar.gz"
-    sha256 "17574e8d886373f7d3f175ab92f7c40613724793a4fc11f4f60ce149ae770ca9"
+    url "https://github.com/nyuszika7h/xpwn/archive/f6baa79ee898657229c71c8fbcc2c7e39f31f35a.tar.gz"
+    sha256 "807e79e2115a43b2ce626086d67e25f0b4b5a1ff4da6ae9253ef102dc7a4b0ad"
   end
 
   def build_libxpwn
@@ -38,9 +38,6 @@ class Libipatcher < Formula
     mkdir_p xpwndir
 
     resource("xpwn").stage do
-      # OpenSSL 1.1.0 fix
-      inreplace "includes/dmg/filevault.h", "HMAC_CTX", "HMAC_CTX *"
-
       mkdir "builddir" do
         system "cmake", "..", *std_cmake_args
         system "make", "xpwn", "common"

@@ -36,7 +36,7 @@ Homebrew tap with various \*OS related tools
 - [libimobiledevice-glue]( https://github.com/libimobiledevice/libimobiledevice-glue )
 - [libimobiledevice]( https://github.com/libimobiledevice/libimobiledevice )
 - [libinsn]( https://github.com/tihmstar/libinsn ) 
-- [libipatcher]( https://github.com/tihmstar/libipatcher )
+- [libipatcher]( https://github.com/Cryptiiiic/libipatcher ) - Cryptiiiic's fork
 - [libirecovery]( https://github.com/libimobiledevice/libirecovery )
 - [libplist]( https://github.com/libimobiledevice/libplist )
 - [libtihmstar-general]( https://github.com/tihmstar/libgeneral )
