@@ -36,8 +36,4 @@ class LibimobiledeviceGlue < Formula
     system "make"
     system "make", "install"
   end
-
-  test do
-    system "true"
-  end
 end
