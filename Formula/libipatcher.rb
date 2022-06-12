@@ -4,6 +4,7 @@ class Libipatcher < Formula
   url "https://github.com/Cryptiiiic/libipatcher.git",
     revision: "1e855d70c84419014e363bdbcaead7b145fe3e1f"
   version "88"
+  license "LGPL-2.1-or-later"
   head "https://github.com/Cryptiiiic/libipatcher.git"
 
   livecheck do
