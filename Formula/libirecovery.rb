@@ -1,5 +1,5 @@
 class Libirecovery < Formula
-  desc "Library for communication to iBoot/iBSS on iOS devices via USB"
+  desc "Library for communication with iBoot/iBSS of iOS devices via USB"
   homepage "https://github.com/libimobiledevice/libirecovery"
   url "https://github.com/libimobiledevice/libirecovery.git",
     revision: "17c02beca2f99b27dab5c1f83cfe4e33036e462b"
@@ -8,6 +8,8 @@ class Libirecovery < Formula
   livecheck do
     skip "upstream has inconsistent tags"
   end
+
+  keg_only "it can conflict with homebrew/core"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
