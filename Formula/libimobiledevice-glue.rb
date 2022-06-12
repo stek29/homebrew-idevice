@@ -4,6 +4,7 @@ class LibimobiledeviceGlue < Formula
   url "https://github.com/libimobiledevice/libimobiledevice-glue.git",
     revision: "d2ff7969dcd0a12e4f18f63dab03e6cd03054fcb"
   version "1.0.0-35-gd2ff796"
+  license "LGPL-2.1-or-later"
   head "https://github.com/libimobiledevice/libimobiledevice-glue.git"
 
   livecheck do
@@ -34,9 +35,5 @@ class LibimobiledeviceGlue < Formula
                           "--prefix=#{prefix}"
     system "make"
     system "make", "install"
-  end
-
-  test do
-    system "true"
   end
 end
