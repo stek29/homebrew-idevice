@@ -19,8 +19,8 @@ class Tsschecker < Formula
   depends_on "pkg-config" => :build
 
   depends_on "libfragmentzip"
-  depends_on "libirecovery"
   depends_on "libplist"
+  depends_on "stek29/idevice/libirecovery"
 
   def fix_tihmstar
     inreplace %w[configure.ac],
@@ -40,5 +40,10 @@ class Tsschecker < Formula
 
     # we dont need libjssy
     bin.install "tsschecker/tsschecker" => "tsschecker"
+  end
+
+  test do
+    v = shell_output("#{bin}/tsschecker", 255).split("\n").first.split("-").last.strip
+    assert_equal version.to_s, v
   end
 end
