@@ -1,5 +1,5 @@
 class LibimobiledeviceGlue < Formula
-  desc "Library with common code used by the libimobiledevice project"
+  desc "Common code used by the libimobiledevice project"
   homepage "https://github.com/libimobiledevice/libimobiledevice-glue"
   url "https://github.com/libimobiledevice/libimobiledevice-glue.git",
     revision: "d2ff7969dcd0a12e4f18f63dab03e6cd03054fcb"
@@ -10,7 +10,7 @@ class LibimobiledeviceGlue < Formula
     skip "upstream has inconsistent tags"
   end
 
-  keg_only "its an utility library for libimobiledevice"
+  keg_only "it's an utility library for libimobiledevice"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
