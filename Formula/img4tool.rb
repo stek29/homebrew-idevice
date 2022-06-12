@@ -13,6 +13,14 @@ class Img4tool < Formula
     regex(%r{<strong>(\d+)</strong>\s*<span aria-label="Commits}im)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/stek29/idevice"
+    rebuild 1
+    sha256 cellar: :any, monterey: "7b6fdeb7d4c2d483e3d44f8868ac11c6c1124acc12719e93ae9d4956f941db50"
+    sha256 cellar: :any, big_sur:  "0a2b86b948b180f4369c0df46917448021c777e06bb3c3059c113ffe898f1158"
+    sha256 cellar: :any, catalina: "c6db68f6e8fe662600d32428234bfde65d0bd16060952560d47e8e95fa206b91"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
