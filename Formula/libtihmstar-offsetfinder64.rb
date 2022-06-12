@@ -4,6 +4,7 @@ class LibtihmstarOffsetfinder64 < Formula
   url "https://github.com/tihmstar/liboffsetfinder64.git",
     revision: "e093adefc92e9c3b56d8f5989835f3247ea0e575"
   version "133"
+  license "LGPL-2.1-or-later"
   head "https://github.com/tihmstar/liboffsetfinder64.git"
 
   livecheck do
