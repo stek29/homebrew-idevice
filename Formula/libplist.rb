@@ -9,6 +9,14 @@ class Libplist < Formula
     skip "upstream has inconsistent tags"
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/stek29/idevice"
+    rebuild 1
+    sha256 cellar: :any, monterey: "140659740d090194e521c28d80d43a3e2383f68b79c1fc7e35ee7b9a915d3cbb"
+    sha256 cellar: :any, big_sur:  "20152f292c78a3fe97c626d5ba0f7582094329f2d64d87ab5d5bdf3b1d8146f7"
+    sha256 cellar: :any, catalina: "b63dab4860034a09fc2442afc0988e552750df41eb9858619e63cceb09a20338"
+  end
+
   keg_only "it can conflict with homebrew/core"
 
   depends_on "autoconf" => :build
