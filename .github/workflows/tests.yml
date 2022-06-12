@@ -36,7 +36,7 @@ jobs:
 
       - run: brew test-bot --only-tap-syntax
 
-      - run: brew test-bot --only-formulae --root-url=https://ghcr.io/v2/stek29/idevicex
+      - run: brew test-bot --only-formulae --root-url=https://ghcr.io/v2/stek29/idevice
         if: github.event_name == 'pull_request'
 
       - name: Upload bottles as artifact
