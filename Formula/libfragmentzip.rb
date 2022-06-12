@@ -4,6 +4,7 @@ class Libfragmentzip < Formula
   url "https://github.com/tihmstar/libfragmentzip.git",
     revision: "aaf6fae83a0aa6f7aae1c94721857076d04a14e8"
   version "64"
+  license "LGPL-3.0-or-later"
   head "https://github.com/tihmstar/libfragmentzip.git"
 
   livecheck do
