@@ -22,6 +22,7 @@ Homebrew tap with various \*OS related tools
 - [xpoce]( http://www.newosxbook.com/tools/XPoCe2.html ) (2.0)
 
 ## Formulas in this tap
+- [dsc_extractor]( https://opensource.apple.com/tarballs/dyld/ )
 - [fsmon]( https://github.com/nowsecure/fsmon )
 - [futurerestore]( https://github.com/tihmstar/futurerestore )
 - [idevicerestore]( https://www.libimobiledevice.org/ )
