@@ -17,6 +17,13 @@ class Libideviceactivation < Formula
     skip "upstream has inconsistent tags"
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/stek29/idevice"
+    sha256 cellar: :any, monterey: "fd1a033a79496ed0138842677f43426f62c8682dd97afe119d7442c59f56ce2c"
+    sha256 cellar: :any, big_sur:  "ce9c3c845db53537898e39c7d9f6f35d25b23ea261d1db9ec310929f26079117"
+    sha256 cellar: :any, catalina: "1adfa279c6124778c6d9594b87c4a9a8067b5306328cfbb6a5476842672ceb66"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
