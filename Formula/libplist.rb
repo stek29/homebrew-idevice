@@ -13,10 +13,10 @@ class Libplist < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/stek29/idevice"
-    rebuild 1
-    sha256 cellar: :any, monterey: "140659740d090194e521c28d80d43a3e2383f68b79c1fc7e35ee7b9a915d3cbb"
-    sha256 cellar: :any, big_sur:  "20152f292c78a3fe97c626d5ba0f7582094329f2d64d87ab5d5bdf3b1d8146f7"
-    sha256 cellar: :any, catalina: "b63dab4860034a09fc2442afc0988e552750df41eb9858619e63cceb09a20338"
+    rebuild 2
+    sha256 cellar: :any, monterey: "2dc619d957a838ebe38baf8e83c9e6130dcfbca33942829292bad41ea72e1766"
+    sha256 cellar: :any, big_sur:  "8dd91eb109d5138f0804c6895efa45fa76ef151865d476b83e28000d58697fd9"
+    sha256 cellar: :any, catalina: "2e094fc4d26f4675666bb7074076efb87677cefaf205996442f4956cea00c707"
   end
 
   keg_only "it can conflict with homebrew/core"
