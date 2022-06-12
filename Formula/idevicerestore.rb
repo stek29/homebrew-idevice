@@ -11,15 +11,17 @@ class Idevicerestore < Formula
     skip "upstream has inconsistent tags"
   end
 
+  keg_only "to avoid conflicts with homebrew/core"
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
-  depends_on "libimobiledevice"
-  depends_on "libirecovery"
   depends_on "libplist"
   depends_on "libzip"
+  depends_on "stek29/idevice/libimobiledevice"
+  depends_on "stek29/idevice/libirecovery"
 
   def install
     system "./autogen.sh", "--disable-debug",
