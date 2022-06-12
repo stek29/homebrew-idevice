@@ -7,6 +7,12 @@ class Futurerestore < Formula
 
   head "https://github.com/tihmstar/futurerestore.git"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/<strong>(\d+)<\/strong>\s*<span aria-label="Commits/m)
+  end
+
   option "without-libipatcher", "Don't bundle libipatcher; disables Odysseus support"
 
   depends_on "autoconf" => :build
