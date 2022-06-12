@@ -16,9 +16,9 @@ class Libideviceactivation < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
-  depends_on "libimobiledevice"
-  depends_on "libplist"
-  depends_on "libusbmuxd"
+  depends_on "stek29/idevice/libusbmuxd"
+  depends_on "stek29/idevice/libimobiledevice"
+  depends_on "stek29/idevice/libplist"
 
   def install
     system "./autogen.sh", "--disable-debug",

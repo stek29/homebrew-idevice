@@ -9,7 +9,7 @@ Homebrew tap with various \*OS related tools
 - [libplist]( https://www.libimobiledevice.org/ ) - outdated because upstream has no releases
 - [radare2]( https://rada.re )
 - [rizin]( https://rizin.re )
-- [usbmuxd]( https://www.libimobiledevice.org/ ) (installing with --HEAD is recommended)
+- [usbmuxd]( https://www.libimobiledevice.org/ ) - outdated because upstream has no releases
 
 ## Already in homebrew-cask
 - [joker]( http://newosxbook.com/tools/joker.html )
@@ -40,6 +40,7 @@ Homebrew tap with various \*OS related tools
 - [libplist]( https://github.com/libimobiledevice/libplist )
 - [libtihmstar-general]( https://github.com/tihmstar/libgeneral )
 - [libtihmstar-offsetfinder64]( https://github.com/tihmstar/liboffsetfinder64 )
+- [libusbmuxd]( https://github.com/libimobiledevice/libusbmuxd )
 - [partial-zip]( https://github.com/planetbeing/partial-zip )
 - [partialzipbrowser]( https://github.com/tihmstar/partialZipBrowser )
 - [tsschecker]( https://github.com/tihmstar/tsschecker )

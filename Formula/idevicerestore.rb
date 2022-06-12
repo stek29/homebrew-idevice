@@ -18,10 +18,10 @@ class Idevicerestore < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
-  depends_on "libplist"
   depends_on "libzip"
   depends_on "stek29/idevice/libimobiledevice"
   depends_on "stek29/idevice/libirecovery"
+  depends_on "stek29/idevice/libplist"
 
   def install
     system "./autogen.sh", "--disable-debug",

@@ -16,7 +16,7 @@ class LibimobiledeviceGlue < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
 
-  depends_on "libplist"
+  depends_on "stek29/idevice/libplist"
 
   def install
     system "./autogen.sh", "--disable-debug",
