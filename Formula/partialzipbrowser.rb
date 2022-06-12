@@ -4,6 +4,8 @@ class Partialzipbrowser < Formula
   url "https://github.com/tihmstar/partialZipBrowser.git",
     revision: "9bfdde2b2456181045f74631683fba491d8bf4f2"
   version "38"
+  license "LGPL-3.0-or-later"
+  head "https://github.com/tihmstar/partialZipBrowser.git"
 
   livecheck do
     url :homepage
@@ -35,5 +37,15 @@ class Partialzipbrowser < Formula
                           "--prefix=#{prefix}"
     system "make"
     system "make", "install"
+  end
+
+  test do
+    test_data = <<~EOS
+      this is a test file
+      zipped and unzipped!
+    EOS
+    (testpath/"test.txt").write test_data
+    system "zip", "test.zip", "test.txt"
+    assert_equal test_data, shell_output("#{bin}/pzb -g test.txt -o - file://./test.zip", 1)
   end
 end
