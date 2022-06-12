@@ -13,10 +13,10 @@ class LibimobiledeviceGlue < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/stek29/idevice"
-    rebuild 1
-    sha256 cellar: :any, monterey: "1b217a06ea71672717a87df850c67ca59962442a01f603ba4ea8883edbf52d75"
-    sha256 cellar: :any, big_sur:  "309351efbaa9f40b2475673f411f769a515de36335c8350c0fd57b1a63f5bf93"
-    sha256 cellar: :any, catalina: "16d7b3449aa808b0f246c4be2a5210b385b68f77a2f74646b378cf768d27981b"
+    rebuild 2
+    sha256 cellar: :any, monterey: "66d56c11d5e4722934e410ebd4431b186f44f079dee6fc6a328542164b7f76db"
+    sha256 cellar: :any, big_sur:  "eda04bf0f3c748515b8caf192e459d002e25e4d6704664cb4dd94d9e5a1342a9"
+    sha256 cellar: :any, catalina: "4bd2571e65b7fba3f9af2ca7f8dd8c0366bb37b001480479b095745be7d8153c"
   end
 
   keg_only "it's an utility library for libimobiledevice"
