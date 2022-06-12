@@ -13,6 +13,14 @@ class LibtihmstarOffsetfinder64 < Formula
     regex(%r{<strong>(\d+)</strong>\s*<span aria-label="Commits}im)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/stek29/idevice"
+    rebuild 1
+    sha256 cellar: :any, monterey: "f9d63147c98fd526faa1a5b74c7aecafdd54aa2dc966812b8ecc1b91326607ff"
+    sha256 cellar: :any, big_sur:  "58abfb97a94aab2cf3954653ae602c9d0bebcaaa539b6b6ad292744f5178fa4c"
+    sha256 cellar: :any, catalina: "7247676f8f46b09fb36081367d1856ac6d81e0cf463959a3ded155a155349881"
+  end
+
   keg_only "its an utility library for tihmstar's projects and isnt used by anything else"
 
   depends_on "autoconf" => :build
