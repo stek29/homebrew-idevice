@@ -2,7 +2,7 @@ class Futurerestore < Formula
   desc "Hacked up idevicerestore wrapper"
   homepage "https://github.com/tihmstar/futurerestore"
   url "https://github.com/tihmstar/futurerestore.git",
-    :revision => "2f0686d3559f1543fc0c0c741b68e1ae940c5a30"
+    revision: "2f0686d3559f1543fc0c0c741b68e1ae940c5a30"
   version "186"
 
   head "https://github.com/tihmstar/futurerestore.git"
@@ -10,7 +10,7 @@ class Futurerestore < Formula
   livecheck do
     url :homepage
     strategy :page_match
-    regex(/<strong>(\d+)<\/strong>\s*<span aria-label="Commits/m)
+    regex(%r{<strong>(\d+)</strong>\s*<span aria-label="Commits}im)
   end
 
   option "without-libipatcher", "Don't bundle libipatcher; disables Odysseus support"

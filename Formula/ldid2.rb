@@ -3,7 +3,7 @@ class Ldid2 < Formula
   homepage "https://github.com/xerub/ldid"
 
   url "https://github.com/xerub/ldid.git",
-    :revision => "db74fea4424ddf8b217a0a8f98bcdc0d8ff29908"
+    revision: "db74fea4424ddf8b217a0a8f98bcdc0d8ff29908"
   version "42-3-gdb74fea"
 
   livecheck do

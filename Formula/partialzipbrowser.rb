@@ -2,13 +2,13 @@ class Partialzipbrowser < Formula
   desc "Tool for zip files on remote webserver"
   homepage "https://github.com/tihmstar/partialZipBrowser"
   url "https://github.com/tihmstar/partialZipBrowser.git",
-    :revision => "9bfdde2b2456181045f74631683fba491d8bf4f2"
+    revision: "9bfdde2b2456181045f74631683fba491d8bf4f2"
   version "38"
 
   livecheck do
     url :homepage
     strategy :page_match
-    regex(/<strong>(\d+)<\/strong>\s*<span aria-label="Commits/m)
+    regex(%r{<strong>(\d+)</strong>\s*<span aria-label="Commits}im)
   end
 
   depends_on "autoconf" => :build

@@ -2,14 +2,14 @@ class Libipatcher < Formula
   desc "Convinient wrapper for iBoot32Patcher"
   homepage "https://github.com/tihmstar/libipatcher"
   url "https://github.com/tihmstar/libipatcher.git",
-    :revision => "0b2f79ff0917ef9b8a92475d93d9466b23fc2322"
+    revision: "0b2f79ff0917ef9b8a92475d93d9466b23fc2322"
   version "82"
   head "https://github.com/tihmstar/libipatcher.git"
 
   livecheck do
     url :homepage
     strategy :page_match
-    regex(/<strong>(\d+)<\/strong>\s*<span aria-label="Commits/m)
+    regex(%r{<strong>(\d+)</strong>\s*<span aria-label="Commits}im)
   end
 
   keg_only "because I don't want this in /usr/local"

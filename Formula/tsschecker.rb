@@ -2,7 +2,7 @@ class Tsschecker < Formula
   desc "Tool to check tss signing status of various devices"
   homepage "https://github.com/tihmstar/tsschecker"
   url "https://github.com/tihmstar/tsschecker.git",
-    :revision => "59554beb8e79319e12d8f373fd5bb9846b8c69c9"
+    revision: "59554beb8e79319e12d8f373fd5bb9846b8c69c9"
   version "323"
 
   head "https://github.com/tihmstar/tsschecker.git"
@@ -10,7 +10,7 @@ class Tsschecker < Formula
   livecheck do
     url :homepage
     strategy :page_match
-    regex(/<strong>(\d+)<\/strong>\s*<span aria-label="Commits/m)
+    regex(%r{<strong>(\d+)</strong>\s*<span aria-label="Commits}im)
   end
 
   depends_on "autoconf" => :build

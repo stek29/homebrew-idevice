@@ -3,17 +3,16 @@ class PartialZip < Formula
   homepage "https://github.com/planetbeing/partial-zip"
 
   url "https://github.com/planetbeing/partial-zip.git",
-    :revision => "1060554ccb77ffc95de70afd3248a9142ca1715c"
+    revision: "1060554ccb77ffc95de70afd3248a9142ca1715c"
   version "0.7"
 
   head "https://github.com/planetbeing/partial-zip.git"
 
   livecheck do
     url :url
+    regex(%r{<strong>(\d+)</strong>\s*<spanaria-label="Commits}im)
     strategy :page_match do |page|
-      v = page
-        .match(/<strong>(\d+)<\/strong>\s*<span aria-label="Commits/m)
-        &.captures&.first
+      v = page.match(regex)&.captures&.first
       "0.#{v}" if v
     end
   end

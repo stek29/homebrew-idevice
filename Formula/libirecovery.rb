@@ -2,7 +2,7 @@ class Libirecovery < Formula
   desc "Library for communication to iBoot/iBSS on iOS devices via USB"
   homepage "https://github.com/libimobiledevice/libirecovery"
   url "https://github.com/libimobiledevice/libirecovery.git",
-    :revision => "17c02beca2f99b27dab5c1f83cfe4e33036e462b"
+    revision: "17c02beca2f99b27dab5c1f83cfe4e33036e462b"
   version "1.0.1-46-g17c02be"
 
   livecheck do

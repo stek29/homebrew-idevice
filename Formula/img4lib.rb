@@ -3,14 +3,14 @@ class Img4lib < Formula
   homepage "https://github.com/xerub/img4lib"
 
   url "https://github.com/xerub/img4lib.git",
-    :revision => "69772c72f3c08f021ec9fa4c386f2b3df60a38b7"
+    revision: "69772c72f3c08f021ec9fa4c386f2b3df60a38b7"
   version "1.0-7-g69772c7"
+
+  head "https://github.com/xerub/img4lib.git"
 
   livecheck do
     skip "upstream has no tags"
   end
-
-  head "https://github.com/xerub/img4lib.git"
 
   depends_on "openssl@1.1"
 

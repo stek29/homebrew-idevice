@@ -2,14 +2,14 @@ class LibtihmstarGeneral < Formula
   desc "General general stuff for tihmstar's projects"
   homepage "https://github.com/tihmstar/libgeneral"
   url "https://github.com/tihmstar/libgeneral.git",
-    :revision => "017d71edb0a12ff4fa01a39d12cd297d8b3d8d34"
+    revision: "017d71edb0a12ff4fa01a39d12cd297d8b3d8d34"
   version "63"
   head "https://github.com/tihmstar/img4tool.git"
 
   livecheck do
     url :homepage
     strategy :page_match
-    regex(/<strong>(\d+)<\/strong>\s*<span aria-label="Commits/m)
+    regex(%r{<strong>(\d+)</strong>\s*<span aria-label="Commits}im)
   end
 
   keg_only "its an utility library for tihmstar's projects and shouldnt be used by anything else"

@@ -2,14 +2,14 @@ class Idevicerestore < Formula
   desc "Restore/upgrade firmware of iOS devices"
   homepage "https://www.libimobiledevice.org/"
   url "https://github.com/libimobiledevice/idevicerestore.git",
-    :revision => "f80a876b3598de4eb551bafcb279947c527fae33"
+    revision: "f80a876b3598de4eb551bafcb279947c527fae33"
   version "1.0.0-95-gf80a876"
+
+  head "https://github.com/libimobiledevice/idevicerestore.git"
 
   livecheck do
     skip "upstream has inconsistent tags"
   end
-
-  head "https://github.com/libimobiledevice/idevicerestore.git"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
