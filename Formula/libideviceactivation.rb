@@ -1,5 +1,5 @@
 class Libideviceactivation < Formula
-  desc "Library handle the activation process of iOS devices"
+  desc "Library to handle the activation process of iOS devices"
   homepage "https://www.libimobiledevice.org/"
   url "https://github.com/libimobiledevice/libideviceactivation.git",
     revision: "75505b75816691e1ff651fb55bfc6aaa7170ba3f"
