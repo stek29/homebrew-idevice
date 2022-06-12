@@ -21,12 +21,12 @@ class Libipatcher < Formula
   depends_on "pkg-config" => :build
 
   depends_on "img4tool"
-  depends_on "libplist"
   depends_on "libpng"
   depends_on "libtihmstar-general"
   depends_on "libtihmstar-offsetfinder64"
   depends_on "libzip"
   depends_on "openssl@1.1"
+  depends_on "stek29/idevice/libplist"
 
   resource "xpwn" do
     url "https://github.com/tihmstar/xpwn/archive/76742fc7b0ea556f005058274e9b69f40c56aef7.tar.gz"
@@ -38,14 +38,12 @@ class Libipatcher < Formula
     mkdir_p xpwndir
 
     resource("xpwn").stage do
-      inreplace "ipsw-patch/CMakeLists.txt", "powerpc-apple-darwin8-libtool", "libtool"
-
       # OpenSSL 1.1.0 fix
       inreplace "includes/dmg/filevault.h", "HMAC_CTX", "HMAC_CTX *"
 
       mkdir "builddir" do
         system "cmake", "..", *std_cmake_args
-        system "make", "libXPwn.a", "common"
+        system "make", "xpwn", "common"
         cp "ipsw-patch/libxpwn.a", xpwndir
         cp "common/libcommon.a", xpwndir
       end

@@ -20,10 +20,10 @@ class LibtihmstarOffsetfinder64 < Formula
   depends_on "pkg-config" => :build
 
   depends_on "img4tool"
-  depends_on "libplist"
   depends_on "libtihmstar-general"
   depends_on "libzip"
-  depends_on "openssl@1.1"
+  depends_on "stek29/idevice/libplist"
+  depends_on "stek29/idevice/libinsn"
 
   def fix_tihmstar
     inreplace %w[configure.ac],
