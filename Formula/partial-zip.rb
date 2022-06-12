@@ -10,7 +10,7 @@ class PartialZip < Formula
 
   livecheck do
     url :url
-    regex(%r{<strong>(\d+)</strong>\s*<spanaria-label="Commits}im)
+    regex(%r{<strong>(\d+)</strong>\s*<span aria-label="Commits}im)
     strategy :page_match do |page|
       v = page.match(regex)&.captures&.first
       "0.#{v}" if v
@@ -24,8 +24,31 @@ class PartialZip < Formula
   patch :DATA
 
   def install
-    system "cmake", ".", *std_cmake_args
-    system "make", "install"
+    args = *std_cmake_args + %W[
+      -DCMAKE_BUILD_WITH_INSTALL_RPATH=ON
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+    ]
+
+    mkdir "build" do
+      system "cmake", "..", *args, "-DBUILD_SHARED_LIBS=ON"
+      system "make", "install"
+
+      system "make", "clean"
+      system "cmake", "..", *args, "-DBUILD_SHARED_LIBS=OFF"
+      system "make"
+      lib.install "libpartial.a"
+    end
+  end
+
+  test do
+    test_data = <<~EOS
+      this is a test file
+      zipped and unzipped!
+    EOS
+    (testpath/"test.txt").write test_data
+    system "zip", "test.zip", "test.txt"
+    system "#{bin}/partialzip", "file://#{testpath}/test.zip", "test.txt", "extracted.txt"
+    assert_equal test_data, (testpath/"extracted.txt").read
   end
 end
 
