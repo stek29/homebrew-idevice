@@ -13,6 +13,14 @@ class Libipatcher < Formula
     regex(%r{<strong>(\d+)</strong>\s*<span aria-label="Commits}im)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/stek29/idevice"
+    rebuild 1
+    sha256 cellar: :any, monterey: "4fdd90b93dac1082b7b08e239244bc4e470f534879f482709fdbdc2c75189e7a"
+    sha256 cellar: :any, big_sur:  "a1a1d1dce68435ec74321cc0a778bc62a8fc76b22f5712ec7e334e1af77a03f2"
+    sha256 cellar: :any, catalina: "5f269cf31124bfe5ab7805ba8cab3255495a3742b42dd03a3312db01f9f2f085"
+  end
+
   keg_only "because I don't want this in /usr/local"
 
   depends_on "autoconf" => :build
