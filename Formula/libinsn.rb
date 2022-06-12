@@ -13,6 +13,14 @@ class Libinsn < Formula
     regex(%r{<strong>(\d+)</strong>\s*<span aria-label="Commits}im)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/stek29/idevice"
+    rebuild 1
+    sha256 cellar: :any, monterey: "48620732f72dbe2fa8592b6ff36e2c1f3d1946ca64af0b260713fbfdf0f95c45"
+    sha256 cellar: :any, big_sur:  "f209e117921ff8b011774823cb37c8fc189bbceb13f46f3ca97494eb7b2c9c4f"
+    sha256 cellar: :any, catalina: "c4a43eb1c4cef94c5a47b739059a28df9296b8e12b9bd098451f09b779cb4913"
+  end
+
   keg_only "its an utility library for tihmstar's projects and shouldnt be used by anything else"
 
   depends_on "autoconf" => :build
