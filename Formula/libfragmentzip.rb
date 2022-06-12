@@ -2,8 +2,15 @@ class Libfragmentzip < Formula
   desc "Library for downloading single files from a remote zip archive"
   homepage "https://github.com/tihmstar/libfragmentzip"
   url "https://github.com/tihmstar/libfragmentzip.git",
-    :tag => "60"
+    :revision => "aaf6fae83a0aa6f7aae1c94721857076d04a14e8"
+  version "64"
   head "https://github.com/tihmstar/libfragmentzip.git"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/<strong>(\d+)<\/strong>/m)
+  end
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
