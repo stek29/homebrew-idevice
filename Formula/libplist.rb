@@ -4,6 +4,8 @@ class Libplist < Formula
   url "https://github.com/libimobiledevice/libplist.git",
     revision: "db93bae96d64140230ad050061632531644c46ad"
   version "2.2.0-92-gdb93bae"
+  license "LGPL-2.1-or-later"
+  head "https://github.com/libimobiledevice/libplist.git"
 
   livecheck do
     skip "upstream has inconsistent tags"
