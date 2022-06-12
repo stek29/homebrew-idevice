@@ -4,7 +4,7 @@ class Tsschecker < Formula
   url "https://github.com/1Conan/tsschecker.git",
     revision: "ba70a6ad0c818b67028276c430ef221591692d2a"
   version "382"
-
+  license "LGPL-3.0-or-later"
   head "https://github.com/1Conan/tsschecker.git"
 
   livecheck do
