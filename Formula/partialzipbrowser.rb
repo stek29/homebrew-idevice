@@ -38,4 +38,14 @@ class Partialzipbrowser < Formula
     system "make"
     system "make", "install"
   end
+
+  test do
+    test_data = <<~EOS
+      this is a test file
+      zipped and unzipped!
+    EOS
+    (testpath/"test.txt").write test_data
+    system "zip", "test.zip", "test.txt"
+    assert_equal test_data, shell_output("#{bin}/pzb -g test.txt -o - file://./test.zip", 1)
+  end
 end
