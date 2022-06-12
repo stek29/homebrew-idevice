@@ -4,7 +4,7 @@ class Libideviceactivation < Formula
   url "https://github.com/libimobiledevice/libideviceactivation.git",
     revision: "75505b75816691e1ff651fb55bfc6aaa7170ba3f"
   version "1.1.1-12-g75505b7"
-
+  license "LGPL-3.0-or-later"
   head "https://github.com/libimobiledevice/libideviceactivation.git"
 
   livecheck do
