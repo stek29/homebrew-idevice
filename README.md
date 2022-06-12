@@ -2,9 +2,11 @@
 Homebrew tap with various \*OS related tools
 
 ## Already in homebrew-core
+- [ideviceinstaller]( https://www.libimobiledevice.org/ )
 - [ldid]( https://cydia.saurik.com/info/ldid/ )
 - [libimobiledevice]( https://www.libimobiledevice.org/ ) (installing with --HEAD is recommended)
-- [ideviceinstaller]( https://www.libimobiledevice.org/ )
+- [radare2]( https://rada.re )
+- [rizin]( https://rizin.re )
 - [usbmuxd]( https://www.libimobiledevice.org/ ) (installing with --HEAD is recommended)
 
 ## Already in homebrew-cask
@@ -13,11 +15,9 @@ Homebrew tap with various \*OS related tools
 - [simplistic]( http://newosxbook.com/tools/simplistic.html ) (jlutil)
 
 ## Casks in this tap
-- [xpoce]( http://www.newosxbook.com/tools/XPoCe2.html ) (2.0)
-- [supraudit]( http://newosxbook.com/tools/supraudit.html )
 - [jtool2]( http://newosxbook.com/forum/viewtopic.php?f=3&t=19577 )
-- [radare2]( https://rada.re )
-- [rizin]( https://rizin.re )
+- [supraudit]( http://newosxbook.com/tools/supraudit.html )
+- [xpoce]( http://www.newosxbook.com/tools/XPoCe2.html ) (2.0)
 
 ## Formulas in this tap
 - [fsmon]( https://github.com/nowsecure/fsmon )
