@@ -2,8 +2,15 @@ class LibtihmstarOffsetfinder64 < Formula
   desc "Finds offsets, patches, parses Mach-O and IMG4"
   homepage "https://github.com/tihmstar/liboffsetfinder64"
   url "https://github.com/tihmstar/liboffsetfinder64.git",
-    :tag => "118"
+    :revision => "e093adefc92e9c3b56d8f5989835f3247ea0e575"
+  version "133"
   head "https://github.com/tihmstar/liboffsetfinder64.git"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/<strong>(\d+)<\/strong>\s*<span aria-label="Commits/m)
+  end
 
   keg_only "its an utility library for tihmstar's projects and isnt used by anything else"
 
