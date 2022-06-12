@@ -14,6 +14,7 @@ class Libirecovery < Formula
   depends_on "libtool" => :build
 
   depends_on "libusb"
+  depends_on "libimobiledevice-glue"
 
   def install
     system "./autogen.sh", "--disable-debug",
@@ -22,5 +23,9 @@ class Libirecovery < Formula
                           "--prefix=#{prefix}"
     system "make"
     system "make", "install"
+  end
+
+  test do
+    assert_equal "irecovery #{version.to_s.split("-").first}\n", shell_output("#{bin}/irecovery -V")
   end
 end
