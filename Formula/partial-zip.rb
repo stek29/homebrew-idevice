@@ -10,7 +10,7 @@ class PartialZip < Formula
 
   livecheck do
     url :url
-    regex(%r{<strong>(\d+)</strong>\s*<spanaria-label="Commits}im)
+    regex(%r{<strong>(\d+)</strong>\s*<span aria-label="Commits}im)
     strategy :page_match do |page|
       v = page.match(regex)&.captures&.first
       "0.#{v}" if v
