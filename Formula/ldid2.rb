@@ -5,6 +5,8 @@ class Ldid2 < Formula
   url "https://github.com/xerub/ldid.git",
     revision: "db74fea4424ddf8b217a0a8f98bcdc0d8ff29908"
   version "42-3-gdb74fea"
+  license "AGPL-3.0-or-later"
+  head "https://github.com/xerub/ldid.git"
 
   livecheck do
     skip "upstream has inconsistent tags"
@@ -23,6 +25,6 @@ class Ldid2 < Formula
     EOS
 
     system ENV.cc, "test.c", "-o", "test"
-    system bin/"ldid2", "-S", "test"
+    system "#{bin}/ldid2", "-S", "test"
   end
 end
