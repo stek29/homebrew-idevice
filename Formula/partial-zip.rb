@@ -8,6 +8,16 @@ class PartialZip < Formula
 
   head "https://github.com/planetbeing/partial-zip.git"
 
+  livecheck do
+    url :url
+    strategy :page_match do |page|
+      v = page
+        .match(/<strong>(\d+)<\/strong>\s*<span aria-label="Commits/m)
+        &.captures&.first
+      "0.#{v}" if v
+    end
+  end
+
   depends_on "cmake" => :build
   depends_on "zlib"
 
