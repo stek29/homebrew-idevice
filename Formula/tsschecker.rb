@@ -1,11 +1,11 @@
 class Tsschecker < Formula
-  desc "Tool to check tss signing status of various devices"
-  homepage "https://github.com/tihmstar/tsschecker"
-  url "https://github.com/tihmstar/tsschecker.git",
-    revision: "59554beb8e79319e12d8f373fd5bb9846b8c69c9"
-  version "323"
+  desc "Tool to check TSS signing status of various devices"
+  homepage "https://github.com/1Conan/tsschecker"
+  url "https://github.com/1Conan/tsschecker.git",
+    revision: "ba70a6ad0c818b67028276c430ef221591692d2a"
+  version "382"
 
-  head "https://github.com/tihmstar/tsschecker.git"
+  head "https://github.com/1Conan/tsschecker.git"
 
   livecheck do
     url :homepage
@@ -19,8 +19,8 @@ class Tsschecker < Formula
   depends_on "pkg-config" => :build
 
   depends_on "libfragmentzip"
-  depends_on "libplist"
   depends_on "stek29/idevice/libirecovery"
+  depends_on "stek29/idevice/libplist"
 
   def fix_tihmstar
     inreplace %w[configure.ac],
@@ -43,7 +43,8 @@ class Tsschecker < Formula
   end
 
   test do
-    v = shell_output("#{bin}/tsschecker", 255).split("\n").first.split("-").last.strip
-    assert_equal version.to_s, v
+    assert_equal version.to_s, shell_output("#{bin}/tsschecker", 255)
+      .split("\n")
+      .first.match(/version: 0\.(\d+)-/).captures.first
   end
 end

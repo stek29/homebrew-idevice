@@ -43,7 +43,7 @@ Homebrew tap with various \*OS related tools
 - [libusbmuxd]( https://github.com/libimobiledevice/libusbmuxd )
 - [partial-zip]( https://github.com/planetbeing/partial-zip )
 - [partialzipbrowser]( https://github.com/tihmstar/partialZipBrowser )
-- [tsschecker]( https://github.com/tihmstar/tsschecker )
+- [tsschecker]( https://github.com/1Conan/tsschecker ) - 1Conan's fork
 - [unsign]( http://www.woodmann.com/collaborative/tools/index.php/Unsign )
 
 ## Requests
