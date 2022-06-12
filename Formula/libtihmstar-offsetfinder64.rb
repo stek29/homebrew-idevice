@@ -22,8 +22,8 @@ class LibtihmstarOffsetfinder64 < Formula
   depends_on "img4tool"
   depends_on "libtihmstar-general"
   depends_on "libzip"
-  depends_on "stek29/idevice/libplist"
   depends_on "stek29/idevice/libinsn"
+  depends_on "stek29/idevice/libplist"
 
   def fix_tihmstar
     inreplace %w[configure.ac],

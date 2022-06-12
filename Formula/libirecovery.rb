@@ -14,8 +14,8 @@ class Libirecovery < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
-  depends_on "libusb"
   depends_on "libimobiledevice-glue"
+  depends_on "libusb"
 
   def install
     system "./autogen.sh", "--disable-debug",

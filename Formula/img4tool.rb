@@ -16,7 +16,7 @@ class Img4tool < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
-  
+
   depends_on "libtihmstar-general"
   depends_on "openssl@1.1"
   depends_on "stek29/idevice/libplist"

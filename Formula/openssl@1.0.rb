@@ -10,9 +10,10 @@ class OpensslAT10 < Formula
   mirror "https://www.mirrorservice.org/sites/ftp.openssl.org/source/openssl-1.0.2u.tar.gz"
   sha256 "ecd0c6ffb493dd06707d38b14bb4d8c2288bb7033735606569d8f90f89669d16"
 
-  keg_only :provided_by_macos,
-    "Apple has deprecated use of OpenSSL in favor of its own TLS and crypto libraries"
-
+  keg_only <<~EOS
+    provided by macOS (not using :provided_by_macos because brew style hates it)
+    just avoid using this, and don't even think about linking it
+  EOS
   depends_on "ca-certificates"
 
   # Add darwin64-arm64-cc & debug-darwin64-arm64-cc build targets.
@@ -53,15 +54,16 @@ class OpensslAT10 < Formula
     openssldir.install_symlink Formula["ca-certificates"].pkgetc/"cert.pem"
   end
 
-  def caveats; <<~EOS
-    A CA file has been bootstrapped using certificates from the SystemRoots
-    keychain. To add additional certificates (e.g. the certificates added in
-    the System keychain), place .pem files in
-      #{openssldir}/certs
+  def caveats
+    <<~EOS
+      A CA file has been bootstrapped using certificates from the SystemRoots
+      keychain. To add additional certificates (e.g. the certificates added in
+      the System keychain), place .pem files in
+        #{openssldir}/certs
 
-    and run
-      #{opt_bin}/c_rehash
-  EOS
+      and run
+        #{opt_bin}/c_rehash
+    EOS
   end
 
   test do
