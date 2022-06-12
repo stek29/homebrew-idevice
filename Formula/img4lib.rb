@@ -3,8 +3,12 @@ class Img4lib < Formula
   homepage "https://github.com/xerub/img4lib"
 
   url "https://github.com/xerub/img4lib.git",
-    :revision => "ed6a79670cf4460488d83702019e7bde7577032f"
-  version "1.git-31"
+    :revision => "69772c72f3c08f021ec9fa4c386f2b3df60a38b7"
+  version "1.0-7-g69772c7"
+
+  livecheck do
+    skip "upstream has no tags"
+  end
 
   head "https://github.com/xerub/img4lib.git"
 
