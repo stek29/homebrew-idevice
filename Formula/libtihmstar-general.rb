@@ -1,5 +1,5 @@
 class LibtihmstarGeneral < Formula
-  desc "General general stuff for tihmstar's projects"
+  desc "General stuff for tihmstar's projects"
   homepage "https://github.com/tihmstar/libgeneral"
   url "https://github.com/tihmstar/libgeneral.git",
     revision: "017d71edb0a12ff4fa01a39d12cd297d8b3d8d34"
@@ -28,10 +28,11 @@ class LibtihmstarGeneral < Formula
   def install
     fix_tihmstar
 
-    system "./autogen.sh", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+    system "./autogen.sh",
+      "--disable-debug",
+      "--disable-dependency-tracking",
+      "--disable-silent-rules",
+      "--prefix=#{prefix}"
     system "make"
     system "make", "install", "PREFIX=#{prefix}"
   end
