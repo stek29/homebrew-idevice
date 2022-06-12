@@ -31,12 +31,19 @@ class Img4tool < Formula
   def install
     fix_tihmstar
 
-    system "./autogen.sh", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+    system "./autogen.sh",
+      "--disable-debug",
+      "--disable-dependency-tracking",
+      "--disable-silent-rules",
+      "--prefix=#{prefix}"
 
     system "make"
     system "make", "install", "PREFIX=#{prefix}"
+  end
+
+  test do
+    assert_equal version.to_s, shell_output("#{bin}/img4tool", 254)
+      .split("\n")
+      .first.match(/version: 0\.(\d+)-/).captures.first
   end
 end
