@@ -4,6 +4,8 @@ class Partialzipbrowser < Formula
   url "https://github.com/tihmstar/partialZipBrowser.git",
     revision: "9bfdde2b2456181045f74631683fba491d8bf4f2"
   version "38"
+  license "LGPL-3.0-or-later"
+  head "https://github.com/tihmstar/partialZipBrowser.git"
 
   livecheck do
     url :homepage
