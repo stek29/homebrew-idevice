@@ -31,4 +31,8 @@ class Idevicerestore < Formula
     system "make"
     system "make", "install"
   end
+
+  test do
+    assert_equal "idevicerestore #{version}\n", shell_output("#{bin}/idevicerestore -v")
+  end
 end
