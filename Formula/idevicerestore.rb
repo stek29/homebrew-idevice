@@ -11,6 +11,14 @@ class Idevicerestore < Formula
     skip "upstream has inconsistent tags"
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/stek29/idevice"
+    rebuild 1
+    sha256 cellar: :any, monterey: "205ebc83b811335dcfdf8e1b3ddc20a810b42ff55942738befe237e16871edcf"
+    sha256 cellar: :any, big_sur:  "f89e42bc4f6cd319370dfe49920b56cff5fb5a8e69bbca317946380c228f3c46"
+    sha256 cellar: :any, catalina: "dd0ae78fac58abaf28bca3b517dbf06f8827c2e728dc5cdc9ed2a498ef4ed158"
+  end
+
   keg_only "it can conflict with homebrew/core"
 
   depends_on "autoconf" => :build
