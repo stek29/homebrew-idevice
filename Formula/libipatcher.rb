@@ -5,7 +5,7 @@ class Libipatcher < Formula
     revision: "1e855d70c84419014e363bdbcaead7b145fe3e1f"
   version "88"
   license "LGPL-2.1-or-later"
-  revision 1
+  revision 2
   head "https://github.com/Cryptiiiic/libipatcher.git"
 
   livecheck do
@@ -84,7 +84,9 @@ class Libipatcher < Formula
 
   def caveats
     <<~EOS
-      this is not the "official" tihmstar/tsschecker, but a maintained fork by Cryptiiiic
+      this is not the "official" tihmstar/libipatcher, but a maintained fork by Cryptiiiic
+
+      it also bundles nyuszika7h's fork of xpwn
     EOS
   end
 end
