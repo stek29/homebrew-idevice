@@ -3,6 +3,7 @@ class DscExtractor < Formula
   homepage "https://opensource.apple.com/tarballs/dyld/"
   url "https://opensource.apple.com/tarballs/dyld/dyld-852.2.tar.gz"
   sha256 "f38e62fa9d3aec0bbc487cc27bf141b060e163195878c2dde31cb54609e436c4"
+  license "APSL-2.0"
   revision 1
 
   livecheck do
