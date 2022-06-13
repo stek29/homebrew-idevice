@@ -1,8 +1,8 @@
-# combined from from:
-# https://github.com/Homebrew/homebrew-core/pull/46876
-# https://github.com/rbenv/homebrew-tap
-# https://github.com/felixbuenemann/homebrew-tap/blob/updates/Formula/openssl%401.0.rb
-# https://github.com/Firefishy/homebrew-tap/blob/additional-cabundle-keychain-seed/Formula/openssl%401.0.rb
+# combined from:
+#  https://github.com/Homebrew/homebrew-core/pull/46876
+#  https://github.com/rbenv/homebrew-tap
+#  https://github.com/felixbuenemann/homebrew-tap/blob/updates/Formula/openssl%401.0.rb
+#  https://github.com/Firefishy/homebrew-tap/blob/additional-cabundle-keychain-seed/Formula/openssl%401.0.rb
 class OpensslAT10 < Formula
   desc "SSL/TLS cryptography library"
   homepage "https://openssl.org/"
@@ -10,9 +10,10 @@ class OpensslAT10 < Formula
   mirror "https://www.mirrorservice.org/sites/ftp.openssl.org/source/openssl-1.0.2u.tar.gz"
   sha256 "ecd0c6ffb493dd06707d38b14bb4d8c2288bb7033735606569d8f90f89669d16"
 
+  # not using provided_by_macos because brew style doesn't like it:
+  # Formulae that are keg_only :provided_by_macos should be added to the PROVIDED_BY_MACOS_FORMULAE
   keg_only <<~EOS
-    provided by macOS (not using :provided_by_macos because brew style hates it)
-    just avoid using this, and don't even think about linking it
+    it's an outdated version of OpenSSL, and it's also provided by macOS
   EOS
   depends_on "ca-certificates"
 
