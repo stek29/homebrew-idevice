@@ -17,6 +17,14 @@ class PartialZip < Formula
     end
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/stek29/idevice"
+    rebuild 1
+    sha256 cellar: :any, monterey: "1e34c953fbda90004174b286296a2cae43b020d8bc9c010d474572138f5400d8"
+    sha256 cellar: :any, big_sur:  "e7768e349cb6b8d00b796af1c2bc534610f112ff3f6769f5bc95054ac04cfda7"
+    sha256 cellar: :any, catalina: "eb63c45d232172241d91246740299c182dd09e7436938ccfaa0e0feb5ea83de2"
+  end
+
   depends_on "cmake" => :build
   depends_on "zlib"
 
