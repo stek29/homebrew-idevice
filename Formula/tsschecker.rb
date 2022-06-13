@@ -13,6 +13,14 @@ class Tsschecker < Formula
     regex(%r{<strong>(\d+)</strong>\s*<span aria-label="Commits}im)
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/stek29/idevice"
+    rebuild 1
+    sha256 cellar: :any, monterey: "90ac85869eb6e363dcb97e31c2f11b8018978eb0136cf6e021c5c62bc901483e"
+    sha256 cellar: :any, big_sur:  "33d9a272e5dd25a5cc320b646994382b443a39d9813503365665ab7fc4df187f"
+    sha256 cellar: :any, catalina: "77d498dbd047ff4b8288683b415ec4aee080f22066e8113ad15bb6256d9f1113"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
