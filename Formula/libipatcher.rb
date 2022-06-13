@@ -5,6 +5,7 @@ class Libipatcher < Formula
     revision: "1e855d70c84419014e363bdbcaead7b145fe3e1f"
   version "88"
   license "LGPL-2.1-or-later"
+  revision 1
   head "https://github.com/Cryptiiiic/libipatcher.git"
 
   livecheck do
@@ -30,9 +31,9 @@ class Libipatcher < Formula
   depends_on "pkg-config" => :build
 
   depends_on "img4tool"
+  depends_on "liboffsetfinder64"
   depends_on "libpng"
   depends_on "libtihmstar-general"
-  depends_on "libtihmstar-offsetfinder64"
   depends_on "libzip"
   depends_on "openssl@1.1"
   depends_on "stek29/idevice/libplist"
@@ -79,6 +80,12 @@ class Libipatcher < Formula
                           "--prefix=#{prefix}"
     system "make"
     system "make", "install", "PREFIX=#{prefix}"
+  end
+
+  def caveats
+    <<~EOS
+      this is not the "official" tihmstar/tsschecker, but a maintained fork by Cryptiiiic
+    EOS
   end
 end
 
