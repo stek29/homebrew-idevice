@@ -16,10 +16,9 @@ class Libipatcher < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/stek29/idevice"
-    rebuild 1
-    sha256 cellar: :any, monterey: "4fdd90b93dac1082b7b08e239244bc4e470f534879f482709fdbdc2c75189e7a"
-    sha256 cellar: :any, big_sur:  "a1a1d1dce68435ec74321cc0a778bc62a8fc76b22f5712ec7e334e1af77a03f2"
-    sha256 cellar: :any, catalina: "5f269cf31124bfe5ab7805ba8cab3255495a3742b42dd03a3312db01f9f2f085"
+    sha256 cellar: :any, monterey: "e873d223d54c057a693474c7e44df969046328c16aab89d2069c735eb560772c"
+    sha256 cellar: :any, big_sur:  "8598cda637ee2409bdec480c045ee780f7c3a229d1d481010391c86d90b24449"
+    sha256 cellar: :any, catalina: "60e18edfc5d99ea7dc8f72ea557654ad86a261d6d4bd969b8e6390b502653e7c"
   end
 
   keg_only "because I don't want this in /usr/local"
