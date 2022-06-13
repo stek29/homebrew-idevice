@@ -28,6 +28,8 @@ class PartialZip < Formula
   depends_on "cmake" => :build
   depends_on "zlib"
 
+  uses_from_macos "zip" => :test
+
   # https://github.com/planetbeing/partial-zip/pull/3
   patch :DATA
 

@@ -29,6 +29,8 @@ class Partialzipbrowser < Formula
   depends_on "libfragmentzip"
   depends_on "libtihmstar-general"
 
+  uses_from_macos "zip" => :test
+
   def fix_tihmstar
     inreplace %w[configure.ac],
       "git rev-list --count HEAD",
