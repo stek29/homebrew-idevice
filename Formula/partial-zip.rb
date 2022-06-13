@@ -6,7 +6,7 @@ class PartialZip < Formula
     revision: "1060554ccb77ffc95de70afd3248a9142ca1715c"
   version "0.7"
 
-  head "https://github.com/planetbeing/partial-zip.git"
+  head "https://github.com/planetbeing/partial-zip.git", branch: "master"
 
   livecheck do
     url :url

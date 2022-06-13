@@ -3,6 +3,7 @@ class IokitUtils < Formula
   homepage "https://github.com/Siguza/iokit-utils"
   url "https://github.com/Siguza/iokit-utils/archive/1.3.0.tar.gz"
   sha256 "9df7dbb0ab78425d82370f87dffaa25161aa79a9ab13b1bc39797f03731563d9"
+  head "https://github.com/Siguza/iokit-utils.git", branch: "master"
 
   bottle do
     root_url "https://ghcr.io/v2/stek29/idevice"

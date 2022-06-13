@@ -5,7 +5,7 @@ class Libirecovery < Formula
     revision: "17c02beca2f99b27dab5c1f83cfe4e33036e462b"
   version "1.0.1-46-g17c02be"
   license "LGPL-2.1-or-later"
-  head "https://github.com/libimobiledevice/libirecovery.git"
+  head "https://github.com/libimobiledevice/libirecovery.git", branch: "master"
 
   livecheck do
     skip "upstream has inconsistent tags"

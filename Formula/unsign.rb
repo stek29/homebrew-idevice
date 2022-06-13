@@ -5,7 +5,7 @@ class Unsign < Formula
     revision: "37151232e3a3186dc60a33c920c60044aa044788"
   version "0.11"
   license "ISC"
-  head "https://github.com/steakknife/unsign.git"
+  head "https://github.com/steakknife/unsign.git", branch: "master"
 
   livecheck do
     url :url

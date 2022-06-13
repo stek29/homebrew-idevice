@@ -5,7 +5,7 @@ class Idevicerestore < Formula
     revision: "f80a876b3598de4eb551bafcb279947c527fae33"
   version "1.0.0-95-gf80a876"
   license "LGPL-3.0-or-later"
-  head "https://github.com/libimobiledevice/idevicerestore.git"
+  head "https://github.com/libimobiledevice/idevicerestore.git", branch: "master"
 
   livecheck do
     skip "upstream has inconsistent tags"

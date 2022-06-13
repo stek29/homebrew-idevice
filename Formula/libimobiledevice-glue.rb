@@ -5,7 +5,7 @@ class LibimobiledeviceGlue < Formula
     revision: "d2ff7969dcd0a12e4f18f63dab03e6cd03054fcb"
   version "1.0.0-35-gd2ff796"
   license "LGPL-2.1-or-later"
-  head "https://github.com/libimobiledevice/libimobiledevice-glue.git"
+  head "https://github.com/libimobiledevice/libimobiledevice-glue.git", branch: "master"
 
   livecheck do
     skip "upstream has inconsistent tags"

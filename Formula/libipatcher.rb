@@ -6,7 +6,7 @@ class Libipatcher < Formula
   version "88"
   license "LGPL-2.1-or-later"
   revision 2
-  head "https://github.com/Cryptiiiic/libipatcher.git"
+  head "https://github.com/Cryptiiiic/libipatcher.git", branch: "main"
 
   livecheck do
     url :homepage

@@ -5,7 +5,7 @@ class Libinsn < Formula
     revision: "e795956b0c0e0c2fcbb074ee1f1cfd84e98f0918"
   version "37"
   license "LGPL-2.1-or-later"
-  head "https://github.com/tihmstar/libinsn.git"
+  head "https://github.com/tihmstar/libinsn.git", branch: "master"
 
   livecheck do
     url :homepage

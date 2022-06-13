@@ -6,7 +6,7 @@ class Liboffsetfinder64 < Formula
   version "152"
   license "LGPL-2.1-or-later"
   revision 1
-  head "https://github.com/Cryptiiiic/liboffsetfinder64.git"
+  head "https://github.com/Cryptiiiic/liboffsetfinder64.git", branch: "main"
 
   livecheck do
     url :homepage

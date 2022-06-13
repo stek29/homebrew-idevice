@@ -5,7 +5,7 @@ class Partialzipbrowser < Formula
     revision: "9bfdde2b2456181045f74631683fba491d8bf4f2"
   version "38"
   license "LGPL-3.0-or-later"
-  head "https://github.com/tihmstar/partialZipBrowser.git"
+  head "https://github.com/tihmstar/partialZipBrowser.git", branch: "master"
 
   livecheck do
     url :homepage

@@ -11,7 +11,7 @@ class Libideviceactivation < Formula
   version "1.1.2-12-g75505b7"
 
   license "LGPL-3.0-or-later"
-  head "https://github.com/libimobiledevice/libideviceactivation.git"
+  head "https://github.com/libimobiledevice/libideviceactivation.git", branch: "master"
 
   livecheck do
     skip "upstream has inconsistent tags"

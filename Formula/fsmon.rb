@@ -3,6 +3,7 @@ class Fsmon < Formula
   homepage "https://github.com/nowsecure/fsmon"
   url "https://github.com/nowsecure/fsmon/archive/1.8.5.tar.gz"
   sha256 "eb99cfb242bea9fc5bde66e67f4324bd71100d17b1672e4e52db14b9a5e2900a"
+  head "https://github.com/nowsecure/fsmon.git", branch: "master"
 
   bottle do
     root_url "https://ghcr.io/v2/stek29/idevice"

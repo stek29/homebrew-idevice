@@ -5,7 +5,7 @@ class Libimobiledevice < Formula
     revision: "93c25b7846179c397a5316fb4fecb31ceff0ec2f"
   version "1.3.0-158-g93c25b7"
   license "LGPL-2.1-or-later"
-  head "https://github.com/libimobiledevice/libimobiledevice.git"
+  head "https://github.com/libimobiledevice/libimobiledevice.git", branch: "master"
 
   livecheck do
     skip "upstream has inconsistent tags"

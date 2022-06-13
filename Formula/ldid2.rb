@@ -6,7 +6,7 @@ class Ldid2 < Formula
     revision: "db74fea4424ddf8b217a0a8f98bcdc0d8ff29908"
   version "42-3-gdb74fea"
   license "AGPL-3.0-or-later"
-  head "https://github.com/xerub/ldid.git"
+  head "https://github.com/xerub/ldid.git", branch: "master"
 
   livecheck do
     skip "upstream has inconsistent tags"

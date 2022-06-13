@@ -5,7 +5,7 @@ class Img4tool < Formula
     revision: "aca6cf005c94caf135023263cbb5c61a0081804f"
   version "197"
   license "LGPL-3.0-or-later"
-  head "https://github.com/tihmstar/img4tool.git"
+  head "https://github.com/tihmstar/img4tool.git", branch: "master"
 
   livecheck do
     url :homepage

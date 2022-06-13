@@ -3,6 +3,7 @@ class Iometa < Formula
   homepage "https://github.com/Siguza/iometa"
   url "https://github.com/Siguza/iometa/archive/1.6.6.tar.gz"
   sha256 "147c88729d897e78688ab969ffb009426d9f1e21895bab6e4e54baed4699dd30"
+  head "https://github.com/Siguza/iometa.git", branch: "master"
 
   bottle do
     root_url "https://ghcr.io/v2/stek29/idevice"

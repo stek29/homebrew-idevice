@@ -5,7 +5,7 @@ class LibtihmstarGeneral < Formula
     revision: "017d71edb0a12ff4fa01a39d12cd297d8b3d8d34"
   version "63"
   license "LGPL-2.1-or-later"
-  head "https://github.com/tihmstar/img4tool.git"
+  head "https://github.com/tihmstar/img4tool.git", branch: "master"
 
   livecheck do
     url :homepage
