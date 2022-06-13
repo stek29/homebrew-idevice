@@ -15,6 +15,14 @@ class OpensslAT10 < Formula
   mirror "http://www.mirrorservice.org/sites/ftp.openssl.org/source/old/1.0.2/openssl-1.0.2u.tar.gz"
   sha256 "ecd0c6ffb493dd06707d38b14bb4d8c2288bb7033735606569d8f90f89669d16"
 
+  bottle do
+    root_url "https://ghcr.io/v2/stek29/idevice"
+    rebuild 1
+    sha256 monterey: "eb016a6a432af3e1addbbee035cac94952c19882c55083ef29d73981834c3279"
+    sha256 big_sur:  "dbb8d0efb6f5209048d2bc84c2e32b09e0b8fc737568b0c2953e293ea53bc259"
+    sha256 catalina: "760002d01324d7237a93e599348726f51db55c6daa227da965fcd5656467078a"
+  end
+
   # not using provided_by_macos because brew style doesn't like it:
   # Formulae that are keg_only :provided_by_macos should be added to the PROVIDED_BY_MACOS_FORMULAE
   keg_only <<~EOS
