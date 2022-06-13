@@ -42,6 +42,12 @@ class Tsschecker < Formula
     bin.install "tsschecker/tsschecker" => "tsschecker"
   end
 
+  def caveats
+    <<~EOS
+      this is not the "official" tihmstar/tsschecker, but a maintained fork by 1Conan
+    EOS
+  end
+
   test do
     assert_equal version.to_s, shell_output("#{bin}/tsschecker", 255)
       .split("\n")
