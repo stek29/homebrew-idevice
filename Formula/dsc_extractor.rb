@@ -18,8 +18,6 @@ class DscExtractor < Formula
     sha256 cellar: :any_skip_relocation, catalina: "bf9f3883d6c662df2686ceb041460c893bc79ef71400ab0730c3dc211170fa01"
   end
 
-  depends_on :xcode
-
   def install
     src = "dyld3/shared-cache/dsc_extractor.cpp"
     inreplace src do |s|
@@ -29,6 +27,15 @@ class DscExtractor < Formula
 
     system ENV.cxx.to_s, "-o", "dsc_extractor", src
     bin.install "dsc_extractor"
+  end
+
+  def caveats
+    <<~EOS
+      dsc_extractor is just a cli wrapper around dsc_extractor.bundle,
+      which is provided by Xcode
+
+      because of that Xcode needs to be installed for dsc_extractor to work
+    EOS
   end
 
   test do
