@@ -24,7 +24,7 @@ Homebrew tap with various \*OS related tools
 ## Formulas in this tap
 - [dsc_extractor]( https://opensource.apple.com/tarballs/dyld/ )
 - [fsmon]( https://github.com/nowsecure/fsmon )
-- [futurerestore]( https://github.com/tihmstar/futurerestore )
+- [futurerestore]( https://github.com/futurerestore/futurerestore ) - futurerestore's fork
 - [idevicerestore]( https://www.libimobiledevice.org/ )
 - [img4lib]( https://github.com/xerub/img4lib )
 - [img4tool]( https://github.com/tihmstar/img4tool )
