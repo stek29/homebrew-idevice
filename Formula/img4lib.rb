@@ -12,6 +12,14 @@ class Img4lib < Formula
     skip "upstream has no tags"
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/stek29/idevice"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, monterey: "70780df7edeb749a447ee49d22fef640505483b83bd19e67cde26c087f6c7095"
+    sha256 cellar: :any_skip_relocation, big_sur:  "ccc8d49374d31a21e8e2caeb953093134ff246a4923efb76a9cfe0cb1199ce98"
+    sha256 cellar: :any_skip_relocation, catalina: "3e6a09ea5d152a9b8aef117bfdb7709d8113e6c2968bd92cff641f1826074d14"
+  end
+
   # libcompression is provided since macOS 10.11
   # according to https://developer.apple.com/documentation/compression
   # on older versions lzfse is needed
