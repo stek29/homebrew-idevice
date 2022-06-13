@@ -16,10 +16,9 @@ class Liboffsetfinder64 < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/stek29/idevice"
-    rebuild 1
-    sha256 cellar: :any, monterey: "f9d63147c98fd526faa1a5b74c7aecafdd54aa2dc966812b8ecc1b91326607ff"
-    sha256 cellar: :any, big_sur:  "58abfb97a94aab2cf3954653ae602c9d0bebcaaa539b6b6ad292744f5178fa4c"
-    sha256 cellar: :any, catalina: "7247676f8f46b09fb36081367d1856ac6d81e0cf463959a3ded155a155349881"
+    sha256 cellar: :any, monterey: "057e00632f99dad8298c94462305d4f15be7204b9bf6b131615fb8841f24d023"
+    sha256 cellar: :any, big_sur:  "da0477616884a55f9aa2a12e658d5e8947173e2213ff4cdf0d641742f98f96b7"
+    sha256 cellar: :any, catalina: "0749c27ea04e2aaf9cb9da41b2e3b99346e942fb57a22861746e3d3769139db9"
   end
 
   keg_only "it's an utility library for various project of tihmstar"
