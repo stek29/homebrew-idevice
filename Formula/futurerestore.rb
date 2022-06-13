@@ -11,6 +11,13 @@ class Futurerestore < Formula
     skip "cmake builds are broken, see https://github.com/futurerestore/futurerestore/issues/75"
   end
 
+  bottle do
+    root_url "https://ghcr.io/v2/stek29/idevice"
+    sha256 cellar: :any, monterey: "1dd4b0f85e51c24a02623e6e7b62478e7428f5f68cebdbd70d9aa2880a4d570d"
+    sha256 cellar: :any, big_sur:  "975ff1112c7464cdfbeb1dff1ea81295b56812c0f3f7bce357fe5184d2465a99"
+    sha256 cellar: :any, catalina: "b452adda5c794295348d9b7358ba7fed1a433a7057e694abb1df9de1cf949dc0"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
