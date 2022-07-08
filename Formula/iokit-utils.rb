@@ -1,8 +1,9 @@
 class IokitUtils < Formula
   desc "Little dev tools for probing IOKit"
   homepage "https://github.com/Siguza/iokit-utils"
-  url "https://github.com/Siguza/iokit-utils/archive/1.3.0.tar.gz"
-  sha256 "9df7dbb0ab78425d82370f87dffaa25161aa79a9ab13b1bc39797f03731563d9"
+  url "https://github.com/Siguza/iokit-utils/archive/1.4.0.tar.gz"
+  sha256 "076731d902717cf60a9c8b1b2a176a0ee0caf96354219f509bdd8675200231c4"
+  license "MPL-2.0-no-copyleft-exception"
   head "https://github.com/Siguza/iokit-utils.git", branch: "master"
 
   bottle do
@@ -14,11 +15,24 @@ class IokitUtils < Formula
   end
 
   def install
-    system "make"
-    cd "bin" do
-      bin.install "ioclass"
-      bin.install "ioprint"
-      bin.install "ioscan"
+    bindir = "bin/macos"
+    binaries = %w[
+      ioclass
+      ioprint
+      ioscan
+    ]
+    # disable codesigning
+    inreplace "Makefile",
+      "codesign", "true",
+      true
+    binaries.each do |b|
+      system "make", "#{bindir}/#{b}"
+      bin.install "#{bindir}/#{b}"
     end
+  end
+
+  test do
+    assert_equal "__kernel__\n",
+      shell_output("#{bin}/ioclass -b RootDomainUserClient")
   end
 end
