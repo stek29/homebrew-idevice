@@ -8,10 +8,9 @@ class IokitUtils < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/stek29/idevice"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, monterey: "ec0596c02b54e260d050ec75a417be8dcbeecad650570227e018b573e34aa277"
-    sha256 cellar: :any_skip_relocation, big_sur:  "0ca1ef7c69ac3209298b1b6e21865b2b10feeeca3cd9c31ecb49ea633a93e2a1"
-    sha256 cellar: :any_skip_relocation, catalina: "5a1562a863de6860dc9cf352efec3f88e143f8ad321f20f1b50d1acfc9f4b307"
+    sha256 cellar: :any_skip_relocation, monterey: "63e1be4ea72390d6be7256369cefea5289adc6b5fb6e911ff587cae8c1794252"
+    sha256 cellar: :any_skip_relocation, big_sur:  "2a7ac460589924a30202522562371e0ec139fb96b3e2907f3efe6884cc0003e7"
+    sha256 cellar: :any_skip_relocation, catalina: "a2274b27d1882729966b7af4f3154ecc92c57b115b7492429c893efa4cf6b96f"
   end
 
   def install
