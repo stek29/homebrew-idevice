@@ -7,11 +7,9 @@ class LibimobiledeviceGlue < Formula
   head "https://github.com/libimobiledevice/libimobiledevice-glue.git", branch: "master"
 
   bottle do
-    root_url "https://ghcr.io/v2/stek29/idevice"
-    rebuild 2
-    sha256 cellar: :any, monterey: "66d56c11d5e4722934e410ebd4431b186f44f079dee6fc6a328542164b7f76db"
-    sha256 cellar: :any, big_sur:  "eda04bf0f3c748515b8caf192e459d002e25e4d6704664cb4dd94d9e5a1342a9"
-    sha256 cellar: :any, catalina: "4bd2571e65b7fba3f9af2ca7f8dd8c0366bb37b001480479b095745be7d8153c"
+    root_url "https://github.com/stek29/homebrew-idevice/releases/download/libimobiledevice-glue-1.1.0"
+    sha256 cellar: :any, arm64_sonoma: "454bec6a4d818189f94e9337be2d3f608f4a9d247ef0f8f1168698f8a6f4a22c"
+    sha256 cellar: :any, ventura:      "a3297ac61fd6dd23ce219df8260482a654950a15c2f09295f7523c719542a57e"
   end
 
   keg_only "it's an utility library for libimobiledevice"
