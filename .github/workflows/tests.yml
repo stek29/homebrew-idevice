@@ -2,16 +2,15 @@ name: brew test-bot
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 jobs:
   test-bot:
     strategy:
       matrix:
         os:
-          - macos-10.15
-          - macos-11
-          - macos-12
+        - macos-13
+        - macos-14
     runs-on: ${{ matrix.os }}
     steps:
       - name: Set up Homebrew
@@ -20,15 +19,11 @@ jobs:
 
       - name: Cache Homebrew Bundler RubyGems
         id: cache
-        uses: actions/cache@v1
+        uses: actions/cache@v3
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ runner.os }}-rubygems-
-
-      - name: Install Homebrew Bundler RubyGems
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: brew install-bundler-gems
 
       - run: brew test-bot --only-cleanup-before
 
@@ -36,12 +31,12 @@ jobs:
 
       - run: brew test-bot --only-tap-syntax
 
-      - run: brew test-bot --only-formulae --root-url=https://ghcr.io/v2/stek29/idevice
+      - run: brew test-bot --only-formulae
         if: github.event_name == 'pull_request'
 
       - name: Upload bottles as artifact
         if: always() && github.event_name == 'pull_request'
-        uses: actions/upload-artifact@main
+        uses: actions/upload-artifact@v3
         with:
           name: bottles
           path: '*.bottle.*'
