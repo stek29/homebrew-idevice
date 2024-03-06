@@ -2,8 +2,8 @@ class Libusbmuxd < Formula
   desc "Library to handle usbmux protocol connections with iOS devices"
   homepage "https://github.com/libimobiledevice/libusbmuxd"
   url "https://github.com/libimobiledevice/libusbmuxd.git",
-    revision: "36ffb7ab6e2a7e33bd1b56398a88895b7b8c615a"
-  version "2.0.2-24-g36ffb7a"
+    revision: "07cd6f774fd444f981ade6e75e10962ba0439350"
+  version "2.0.2-34-g07cd6f7"
   license "LGPL-2.1-or-later"
   head "https://github.com/libimobiledevice/libusbmuxd.git", branch: "master"
 
@@ -26,16 +26,19 @@ class Libusbmuxd < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
-  depends_on "libimobiledevice-glue"
+  depends_on "libplist"
   depends_on "libusb"
-  depends_on "stek29/idevice/libplist"
+  depends_on "stek29/idevice/libimobiledevice-glue"
 
   def install
-    system "./autogen.sh",
-      "--disable-debug",
-      "--disable-dependency-tracking",
-      "--disable-silent-rules",
-      "--prefix=#{prefix}"
+    args = %w[
+      --disable-debug
+      --disable-dependency-tracking
+      --disable-silent-rules
+    ]
+
+    system "./autogen.sh", *std_configure_args, *args
+
     system "make"
     system "make", "install"
   end
