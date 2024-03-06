@@ -1,15 +1,10 @@
 class LibimobiledeviceGlue < Formula
   desc "Common code used by the libimobiledevice project"
   homepage "https://github.com/libimobiledevice/libimobiledevice-glue"
-  url "https://github.com/libimobiledevice/libimobiledevice-glue.git",
-    revision: "d2ff7969dcd0a12e4f18f63dab03e6cd03054fcb"
-  version "1.0.0-35-gd2ff796"
+  url "https://github.com/libimobiledevice/libimobiledevice-glue/releases/download/1.1.0/libimobiledevice-glue-1.1.0.tar.bz2"
+  sha256 "e7f93c1e6ceacf617ed78bdca92749d15a9dac72443ccb62eb59e4d606d87737"
   license "LGPL-2.1-or-later"
   head "https://github.com/libimobiledevice/libimobiledevice-glue.git", branch: "master"
-
-  livecheck do
-    skip "upstream has inconsistent tags"
-  end
 
   bottle do
     root_url "https://ghcr.io/v2/stek29/idevice"
@@ -26,13 +21,18 @@ class LibimobiledeviceGlue < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
-  depends_on "stek29/idevice/libplist"
+  depends_on "libplist"
 
   def install
-    system "./autogen.sh", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+    args = %w[
+      --disable-debug
+      --disable-dependency-tracking
+      --disable-silent-rules
+    ]
+
+    system "./autogen.sh", *std_configure_args, *args if build.head?
+    system "./configure", *std_configure_args, *args if build.stable?
+
     system "make"
     system "make", "install"
   end
