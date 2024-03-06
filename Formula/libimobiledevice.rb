@@ -2,8 +2,8 @@ class Libimobiledevice < Formula
   desc "Library to communicate with iOS devices natively"
   homepage "https://github.com/libimobiledevice/libimobiledevice"
   url "https://github.com/libimobiledevice/libimobiledevice.git",
-    revision: "93c25b7846179c397a5316fb4fecb31ceff0ec2f"
-  version "1.3.0-158-g93c25b7"
+    revision: "73b6fd183872096f20e6d1007429546a317a7cb1"
+  version "1.3.0-210-g73b6fd1"
   license "LGPL-2.1-or-later"
   head "https://github.com/libimobiledevice/libimobiledevice.git", branch: "master"
 
@@ -26,19 +26,22 @@ class Libimobiledevice < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
-  depends_on "libimobiledevice-glue"
+  depends_on "libplist"
   depends_on "libtasn1"
   depends_on "openssl@1.1"
-  depends_on "stek29/idevice/libplist"
+  depends_on "stek29/idevice/libimobiledevice-glue"
   depends_on "stek29/idevice/libusbmuxd"
 
   def install
-    system "./autogen.sh",
-      "--disable-debug",
-      "--disable-dependency-tracking",
-      "--disable-silent-rules",
-      "--prefix=#{prefix}",
-      "--without-cython"
+    args = %w[
+      --disable-debug
+      --disable-dependency-tracking
+      --disable-silent-rules
+      --without-cython
+    ]
+
+    system "./autogen.sh", *std_configure_args, *args
+
     system "make"
     system "make", "install"
   end
