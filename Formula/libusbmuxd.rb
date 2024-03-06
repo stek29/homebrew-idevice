@@ -12,11 +12,9 @@ class Libusbmuxd < Formula
   end
 
   bottle do
-    root_url "https://ghcr.io/v2/stek29/idevice"
-    rebuild 1
-    sha256 cellar: :any, monterey: "5b5d7a7c9c99f82a5d150913138f9c67179672c51b2d698241d8bd5879270f20"
-    sha256 cellar: :any, big_sur:  "2c7694242cacde59ed64607a3a609d9066f4a1f8b4c64945953ebc8725dcb0d2"
-    sha256 cellar: :any, catalina: "41c058154a32e154940c5677611cccb9e72d6df7482cb99721f3e61ca00e3f22"
+    root_url "https://github.com/stek29/homebrew-idevice/releases/download/libusbmuxd-2.0.2-34-g07cd6f7"
+    sha256 cellar: :any, arm64_sonoma: "94cfcb6fecdbd8f4fd000118e44f930bc1ef0ad15160afd163b070f7644035f4"
+    sha256 cellar: :any, ventura:      "5869bfcc157d4934ce601ab98a262f2de5dd31c59598c503f1570e39117be07b"
   end
 
   keg_only "it can conflict with homebrew/core"
