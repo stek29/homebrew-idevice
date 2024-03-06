@@ -30,7 +30,6 @@ Homebrew tap with various \*OS related tools
 - [img4tool]( https://github.com/tihmstar/img4tool )
 - [iokit-utils]( https://github.com/Siguza/iokit-utils )
 - [iometa]( https://github.com/Siguza/iometa )
-- [ios-kern-utils]( https://github.com/Siguza/ios-kern-utils )
 - [ldid2]( https://github.com/xerub/ldid )
 - [libfragmentzip]( https://github.com/tihmstar/libfragmentzip )
 - [libideviceactivation]( https://www.libimobiledevice.org/ )
