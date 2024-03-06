@@ -1,7 +1,7 @@
 class IosKernUtils < Formula
   desc "iOS Kernel utilities"
   homepage "https://github.com/Siguza/ios-kern-utils"
-  url "https://github.com/Siguza/ios-kern-utils/archive/1.4.1.tar.gz"
+  url "https://github.com/Siguza/ios-kern-utils/archive/refs/tags/1.4.1.tar.gz"
   sha256 "24cf9d393d94cdd351691ed1f062bb02af6d0853783b762546ab89b4e29a156a"
   license "MIT"
   head "https://github.com/Siguza/ios-kern-utils.git", branch: "master"
