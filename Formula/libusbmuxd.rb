@@ -5,6 +5,7 @@ class Libusbmuxd < Formula
     revision: "07cd6f774fd444f981ade6e75e10962ba0439350"
   version "2.0.2-34-g07cd6f7"
   license "LGPL-2.1-or-later"
+  revision 1
   head "https://github.com/libimobiledevice/libusbmuxd.git", branch: "master"
 
   livecheck do
@@ -24,9 +25,9 @@ class Libusbmuxd < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
+  depends_on "libimobiledevice-glue"
   depends_on "libplist"
   depends_on "libusb"
-  depends_on "stek29/idevice/libimobiledevice-glue"
 
   def install
     args = %w[
