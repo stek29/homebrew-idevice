@@ -2,8 +2,8 @@ class Img4tool < Formula
   desc "Tool for manipulating IMG4, IM4M and IM4P files"
   homepage "https://github.com/tihmstar/img4tool"
   url "https://github.com/tihmstar/img4tool.git",
-    revision: "aca6cf005c94caf135023263cbb5c61a0081804f"
-  version "197"
+    revision: "e1c37d6ce8c629ca9669efc9cb5b5f7d6810ed30"
+  version "202"
   license "LGPL-3.0-or-later"
   head "https://github.com/tihmstar/img4tool.git", branch: "master"
 
@@ -26,9 +26,9 @@ class Img4tool < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
+  depends_on "libplist"
   depends_on "libtihmstar-general"
-  depends_on "openssl@1.1"
-  depends_on "stek29/idevice/libplist"
+  depends_on "openssl@3"
 
   def fix_tihmstar
     inreplace %w[configure.ac],
@@ -40,12 +40,7 @@ class Img4tool < Formula
   def install
     fix_tihmstar
 
-    system "./autogen.sh",
-      "--disable-debug",
-      "--disable-dependency-tracking",
-      "--disable-silent-rules",
-      "--prefix=#{prefix}"
-
+    system "./autogen.sh", *std_configure_args
     system "make"
     system "make", "install", "PREFIX=#{prefix}"
   end
