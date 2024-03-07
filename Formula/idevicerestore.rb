@@ -12,11 +12,9 @@ class Idevicerestore < Formula
   end
 
   bottle do
-    root_url "https://ghcr.io/v2/stek29/idevice"
-    rebuild 1
-    sha256 cellar: :any, monterey: "205ebc83b811335dcfdf8e1b3ddc20a810b42ff55942738befe237e16871edcf"
-    sha256 cellar: :any, big_sur:  "f89e42bc4f6cd319370dfe49920b56cff5fb5a8e69bbca317946380c228f3c46"
-    sha256 cellar: :any, catalina: "dd0ae78fac58abaf28bca3b517dbf06f8827c2e728dc5cdc9ed2a498ef4ed158"
+    root_url "https://github.com/stek29/homebrew-idevice/releases/download/idevicerestore-1.0.0-171-g8a5abb9"
+    sha256 cellar: :any, arm64_sonoma: "0ad011810694656c4cd8dd76a0121140702478952252aaead1b6629e98329b5c"
+    sha256 cellar: :any, ventura:      "3aedf536d97b40aae1aac22d0900f706eac8e93eaeea05598ba9456a7a34f462"
   end
 
   keg_only "it can conflict with homebrew/core"
