@@ -5,6 +5,7 @@ class Libimobiledevice < Formula
     revision: "73b6fd183872096f20e6d1007429546a317a7cb1"
   version "1.3.0-210-g73b6fd1"
   license "LGPL-2.1-or-later"
+  revision 1
   head "https://github.com/libimobiledevice/libimobiledevice.git", branch: "master"
 
   livecheck do
@@ -24,10 +25,10 @@ class Libimobiledevice < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
+  depends_on "libimobiledevice-glue"
   depends_on "libplist"
   depends_on "libtasn1"
-  depends_on "openssl@1.1"
-  depends_on "stek29/idevice/libimobiledevice-glue"
+  depends_on "openssl@3"
   depends_on "stek29/idevice/libusbmuxd"
 
   def install
