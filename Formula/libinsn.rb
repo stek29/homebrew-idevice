@@ -14,11 +14,9 @@ class Libinsn < Formula
   end
 
   bottle do
-    root_url "https://ghcr.io/v2/stek29/idevice"
-    rebuild 1
-    sha256 cellar: :any, monterey: "48620732f72dbe2fa8592b6ff36e2c1f3d1946ca64af0b260713fbfdf0f95c45"
-    sha256 cellar: :any, big_sur:  "f209e117921ff8b011774823cb37c8fc189bbceb13f46f3ca97494eb7b2c9c4f"
-    sha256 cellar: :any, catalina: "c4a43eb1c4cef94c5a47b739059a28df9296b8e12b9bd098451f09b779cb4913"
+    root_url "https://github.com/stek29/homebrew-idevice/releases/download/libinsn-49"
+    sha256 cellar: :any, arm64_sonoma: "3570efb30d0b83949b612cdf1d0e018e578a2cc53a87cbcfa8f4da9bbb202a06"
+    sha256 cellar: :any, ventura:      "75972e615d4581011bf349387414c98147e106b316de96aef46bb05a17204386"
   end
 
   keg_only "its an utility library for tihmstar's projects and shouldnt be used by anything else"
