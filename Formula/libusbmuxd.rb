@@ -13,9 +13,9 @@ class Libusbmuxd < Formula
   end
 
   bottle do
-    root_url "https://github.com/stek29/homebrew-idevice/releases/download/libusbmuxd-2.0.2-34-g07cd6f7"
-    sha256 cellar: :any, arm64_sonoma: "94cfcb6fecdbd8f4fd000118e44f930bc1ef0ad15160afd163b070f7644035f4"
-    sha256 cellar: :any, ventura:      "5869bfcc157d4934ce601ab98a262f2de5dd31c59598c503f1570e39117be07b"
+    root_url "https://github.com/stek29/homebrew-idevice/releases/download/libusbmuxd-2.0.2-34-g07cd6f7_1"
+    sha256 cellar: :any, arm64_sonoma: "1301a8f88b3953d64f535856062a3d851e4d07f44f6fee24c414946213f01d3d"
+    sha256 cellar: :any, ventura:      "5fd66f5a3e781ae61e745765c4e8d25458d0b31ea6f6569656bfd3dd9f4583f8"
   end
 
   keg_only "it can conflict with homebrew/core"
