@@ -2,8 +2,8 @@ class Libinsn < Formula
   desc "Instruction decoder/encoder for 64bit ARM"
   homepage "https://github.com/tihmstar/libinsn"
   url "https://github.com/tihmstar/libinsn.git",
-    revision: "e795956b0c0e0c2fcbb074ee1f1cfd84e98f0918"
-  version "37"
+    revision: "c2ed667df12e185b0964cf32850f8e42839ccaa9"
+  version "49"
   license "LGPL-2.1-or-later"
   head "https://github.com/tihmstar/libinsn.git", branch: "master"
 
@@ -40,10 +40,7 @@ class Libinsn < Formula
   def install
     fix_tihmstar
 
-    system "./autogen.sh", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+    system "./autogen.sh", *std_configure_args
     system "make"
     system "make", "install", "PREFIX=#{prefix}"
   end
