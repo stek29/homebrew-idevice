@@ -14,11 +14,9 @@ class Img4tool < Formula
   end
 
   bottle do
-    root_url "https://ghcr.io/v2/stek29/idevice"
-    rebuild 1
-    sha256 cellar: :any, monterey: "7b6fdeb7d4c2d483e3d44f8868ac11c6c1124acc12719e93ae9d4956f941db50"
-    sha256 cellar: :any, big_sur:  "0a2b86b948b180f4369c0df46917448021c777e06bb3c3059c113ffe898f1158"
-    sha256 cellar: :any, catalina: "c6db68f6e8fe662600d32428234bfde65d0bd16060952560d47e8e95fa206b91"
+    root_url "https://github.com/stek29/homebrew-idevice/releases/download/img4tool-202"
+    sha256 cellar: :any, arm64_sonoma: "ef79e4979aa8837f5068cd9ffa6ceada2fa512f2cf143b16416ef6ac55223b7e"
+    sha256 cellar: :any, ventura:      "8a1d65d8de596044094bc3d8af24ecf7beff12d07c52f8c565e494ac16e70450"
   end
 
   depends_on "autoconf" => :build
