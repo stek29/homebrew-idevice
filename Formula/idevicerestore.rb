@@ -2,8 +2,8 @@ class Idevicerestore < Formula
   desc "Restore firmware files to iOS devices"
   homepage "https://www.libimobiledevice.org/"
   url "https://github.com/libimobiledevice/idevicerestore.git",
-    revision: "f80a876b3598de4eb551bafcb279947c527fae33"
-  version "1.0.0-95-gf80a876"
+    revision: "8a5abb99170b324b0fc5a00928ba2ac78a7afc98"
+  version "1.0.0-171-g8a5abb9"
   license "LGPL-3.0-or-later"
   head "https://github.com/libimobiledevice/idevicerestore.git", branch: "master"
 
@@ -26,16 +26,20 @@ class Idevicerestore < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
+  depends_on "libplist"
   depends_on "libzip"
   depends_on "stek29/idevice/libimobiledevice"
   depends_on "stek29/idevice/libirecovery"
-  depends_on "stek29/idevice/libplist"
 
   def install
-    system "./autogen.sh", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+    args = %w[
+      --disable-debug
+      --disable-dependency-tracking
+      --disable-silent-rules
+    ]
+
+    system "./autogen.sh", *std_configure_args, *args
+
     system "make"
     system "make", "install"
   end
