@@ -13,9 +13,9 @@ class Libimobiledevice < Formula
   end
 
   bottle do
-    root_url "https://github.com/stek29/homebrew-idevice/releases/download/libimobiledevice-1.3.0-210-g73b6fd1"
-    sha256 cellar: :any, arm64_sonoma: "6d953628da0d7f806bcf5eba9682a17e6ebc87ae08ac08d0f5801759a4e95620"
-    sha256 cellar: :any, ventura:      "b4f790c84f3c435abad7b9ada2373a7a6f47e30dc12b9215293b90dea7cfcbf2"
+    root_url "https://github.com/stek29/homebrew-idevice/releases/download/libimobiledevice-1.3.0-210-g73b6fd1_1"
+    sha256 cellar: :any, arm64_sonoma: "2f076e42163e6a39d3a616167bb4994136c29c4fe606c38c909a2129af849b24"
+    sha256 cellar: :any, ventura:      "1886597144b7d35d4a9cd07fe1de6c3e56e4b30c9d7613b7d9af188d33450284"
   end
 
   keg_only "it can conflict with homebrew/core"
