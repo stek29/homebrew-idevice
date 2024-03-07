@@ -10,7 +10,7 @@ class Libfragmentzip < Formula
   livecheck do
     url :homepage
     strategy :page_match
-    regex(%r{<strong>(\d+)</strong>}im)
+    regex(%r{(\d+) Commits}im)
   end
 
   bottle do

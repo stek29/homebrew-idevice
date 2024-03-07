@@ -8,7 +8,9 @@ class Futurerestore < Formula
   head "https://github.com/futurerestore/futurerestore.git", branch: "test"
 
   livecheck do
-    skip "cmake builds are broken, see https://github.com/futurerestore/futurerestore/issues/75"
+    url :homepage
+    strategy :page_match
+    regex(%r{(\d+) Commits}im)
   end
 
   bottle do

@@ -10,7 +10,7 @@ class Tsschecker < Formula
   livecheck do
     url :homepage
     strategy :page_match
-    regex(%r{<strong>(\d+)</strong>\s*<span aria-label="Commits}im)
+    regex(%r{(\d+) Commits}im)
   end
 
   bottle do
