@@ -45,7 +45,6 @@ Homebrew tap with various \*OS related tools
 - [partial-zip]( https://github.com/planetbeing/partial-zip )
 - [partialzipbrowser]( https://github.com/tihmstar/partialZipBrowser )
 - [tsschecker]( https://github.com/1Conan/tsschecker ) - 1Conan's fork
-- [unsign]( http://www.woodmann.com/collaborative/tools/index.php/Unsign )
 
 ## Requests
 - Want some other package? File an issue :)
