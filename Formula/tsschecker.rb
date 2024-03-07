@@ -2,8 +2,8 @@ class Tsschecker < Formula
   desc "Tool to check TSS signing status of various devices"
   homepage "https://github.com/1Conan/tsschecker"
   url "https://github.com/1Conan/tsschecker.git",
-    revision: "ba70a6ad0c818b67028276c430ef221591692d2a"
-  version "382"
+    revision: "75f5c11420946c9d2b6ce3bacb35f0b7beddc84a"
+  version "431"
   license "LGPL-3.0-or-later"
   head "https://github.com/1Conan/tsschecker.git", branch: "master"
 
@@ -27,8 +27,8 @@ class Tsschecker < Formula
   depends_on "pkg-config" => :build
 
   depends_on "libfragmentzip"
+  depends_on "libplist"
   depends_on "stek29/idevice/libirecovery"
-  depends_on "stek29/idevice/libplist"
 
   def fix_tihmstar
     inreplace %w[configure.ac],
@@ -40,10 +40,7 @@ class Tsschecker < Formula
   def install
     fix_tihmstar
 
-    system "./autogen.sh", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+    system "./autogen.sh", *std_configure_args
     system "make"
 
     # we dont need libjssy
