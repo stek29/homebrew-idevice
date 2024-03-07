@@ -10,7 +10,7 @@ class PartialZip < Formula
 
   livecheck do
     url :url
-    regex(%r{(\d+) Commits}im)
+    regex(/(\d+) Commits/im)
     strategy :page_match do |page|
       v = page.match(regex)&.captures&.first
       "0.#{v}" if v

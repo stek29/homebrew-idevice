@@ -11,7 +11,7 @@ class Liboffsetfinder64 < Formula
   livecheck do
     url :homepage
     strategy :page_match
-    regex(%r{(\d+) Commits}im)
+    regex(/(\d+) Commits/im)
   end
 
   bottle do

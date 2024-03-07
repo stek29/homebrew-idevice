@@ -34,7 +34,7 @@ Homebrew tap with various \*OS related tools
 - [libfragmentzip]( https://github.com/tihmstar/libfragmentzip )
 - [libideviceactivation]( https://www.libimobiledevice.org/ )
 - [libimobiledevice]( https://github.com/libimobiledevice/libimobiledevice )
-- [libinsn]( https://github.com/tihmstar/libinsn ) 
+- [libinsn]( https://github.com/tihmstar/libinsn )
 - [libipatcher]( https://github.com/Cryptiiiic/libipatcher ) - Cryptiiiic's fork
 - [libirecovery]( https://github.com/libimobiledevice/libirecovery )
 - [liboffsetfinder64]( https://github.com/Cryptiiiic/liboffsetfinder64 ) - Cryptiiiic's fork
