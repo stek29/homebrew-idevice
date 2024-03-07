@@ -14,11 +14,9 @@ class LibtihmstarGeneral < Formula
   end
 
   bottle do
-    root_url "https://ghcr.io/v2/stek29/idevice"
-    rebuild 1
-    sha256 cellar: :any, monterey: "60fd57a3f45f5dfb2c50ab91bce96559221f0aa5f3c207ed1e443065cbe57f0a"
-    sha256 cellar: :any, big_sur:  "a38e775d660531e528093d0556247b5c673eb763a02c7ef1aeb7c90509da863c"
-    sha256 cellar: :any, catalina: "1c1fb4a3e9822881962a743e61b0023998cb566823ddaf89b7c31c4d6756026f"
+    root_url "https://github.com/stek29/homebrew-idevice/releases/download/libtihmstar-general-77"
+    sha256 cellar: :any, arm64_sonoma: "8fb71f18058442679e0623e40ec9bae2ea21da7ef86624d0e18228ca0116b6b8"
+    sha256 cellar: :any, ventura:      "f598b2159ba5aa15c4023717d9cf0e5cf43c9dcfc47e4f7ea8c3ff38af63b205"
   end
 
   keg_only "its an utility library for tihmstar's projects and shouldnt be used by anything else"
