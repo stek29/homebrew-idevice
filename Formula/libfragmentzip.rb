@@ -14,11 +14,9 @@ class Libfragmentzip < Formula
   end
 
   bottle do
-    root_url "https://ghcr.io/v2/stek29/idevice"
-    rebuild 1
-    sha256 cellar: :any, monterey: "7edf7681ecc2b0181cede6640517c5c85a55ed90bdc3b1313bdfb895cf3d61e1"
-    sha256 cellar: :any, big_sur:  "3345b18573cc36116bac45e503fbc06711b675da9db610dd5accf9c6ac86b32c"
-    sha256 cellar: :any, catalina: "cb9f8d611c6726d009e546658edf936a266b03270ef63587b30f497b72d1f364"
+    root_url "https://github.com/stek29/homebrew-idevice/releases/download/libfragmentzip-70"
+    sha256 cellar: :any, arm64_sonoma: "584b2f0064be28ea5b660ecc05a4011008c318c85d731e15585c13801eb159d8"
+    sha256 cellar: :any, ventura:      "7cfbcd546727c873357691e6fdb64be0c00188e6d1d03881671c9dd58b000d00"
   end
 
   depends_on "autoconf" => :build
