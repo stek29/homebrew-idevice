@@ -2,10 +2,10 @@ class LibtihmstarGeneral < Formula
   desc "General stuff for tihmstar's projects"
   homepage "https://github.com/tihmstar/libgeneral"
   url "https://github.com/tihmstar/libgeneral.git",
-    revision: "017d71edb0a12ff4fa01a39d12cd297d8b3d8d34"
-  version "63"
+    revision: "6bca5824f23ab88af0de6568bc7b3213318c27ed"
+  version "77"
   license "LGPL-2.1-or-later"
-  head "https://github.com/tihmstar/img4tool.git", branch: "master"
+  head "https://github.com/tihmstar/libgeneral.git", branch: "master"
 
   livecheck do
     url :homepage
@@ -37,11 +37,7 @@ class LibtihmstarGeneral < Formula
   def install
     fix_tihmstar
 
-    system "./autogen.sh",
-      "--disable-debug",
-      "--disable-dependency-tracking",
-      "--disable-silent-rules",
-      "--prefix=#{prefix}"
+    system "./autogen.sh", *std_configure_args
     system "make"
     system "make", "install", "PREFIX=#{prefix}"
   end
