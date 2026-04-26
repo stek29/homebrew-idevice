@@ -25,6 +25,7 @@ class Idevicerestore < Formula
   depends_on "pkg-config" => :build
 
   depends_on "libplist"
+  depends_on "libtatsu"
   depends_on "libzip"
   depends_on "stek29/idevice/libimobiledevice"
   depends_on "stek29/idevice/libirecovery"

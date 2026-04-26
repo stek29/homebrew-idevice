@@ -28,6 +28,7 @@ class Libimobiledevice < Formula
   depends_on "libimobiledevice-glue"
   depends_on "libplist"
   depends_on "libtasn1"
+  depends_on "libtatsu"
   depends_on "openssl@3"
   depends_on "stek29/idevice/libusbmuxd"
 
