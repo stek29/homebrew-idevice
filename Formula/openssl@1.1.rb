@@ -6,6 +6,15 @@ class OpensslAT11 < Formula
   license "OpenSSL"
   version_scheme 1
 
+  bottle do
+    root_url "https://github.com/stek29/homebrew-idevice/releases/download/openssl@1.1-1.1.1w"
+    sha256 arm64_tahoe:   "447115e6e1d357da765010113344e7dce17538a032a1f24d3427f451bf3d9733"
+    sha256 arm64_sequoia: "3dded2e14090dc2a30675fb04786e380422e77d94c7c1b02cc5c4fc413695555"
+    sha256 arm64_sonoma:  "533479b445062ce1f9102820af2dd610ad34673bee8f2f7e397460dee4438f43"
+    sha256 tahoe:         "abebee23449612d07c1f644d2665918a8aee9b005b154edeeadfc57b8626c603"
+    sha256 sequoia:       "3e9d95304bd08eb6e1c3a6b5d931c82ad5b466c670bd951f905fe5d5fb276d4c"
+  end
+
   keg_only :versioned_formula
 
   depends_on "ca-certificates"
