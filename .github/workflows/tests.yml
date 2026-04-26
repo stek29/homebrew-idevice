@@ -1,29 +1,43 @@
 name: brew test-bot
+
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
 jobs:
   test-bot:
+    name: test-bot (${{ matrix.os }})
     strategy:
+      fail-fast: false
       matrix:
         os:
-        - macos-13
-        - macos-14
+          - macos-14
+          - macos-15
+          - macos-15-intel
+          - macos-26
+          - macos-26-intel
     runs-on: ${{ matrix.os }}
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@master
+        uses: Homebrew/actions/setup-homebrew@main
 
       - name: Cache Homebrew Bundler RubyGems
         id: cache
-        uses: actions/cache@v3
+        uses: actions/cache@v5
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
-          key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
-          restore-keys: ${{ runner.os }}-rubygems-
+          key: ${{ matrix.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ matrix.os }}-rubygems-
 
       - run: brew test-bot --only-cleanup-before
 
@@ -36,7 +50,8 @@ jobs:
 
       - name: Upload bottles as artifact
         if: always() && github.event_name == 'pull_request'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
-          name: bottles
+          name: bottles_${{ matrix.os }}
           path: '*.bottle.*'
+          if-no-files-found: ignore
