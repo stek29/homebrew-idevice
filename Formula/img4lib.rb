@@ -41,7 +41,7 @@ class Img4lib < Formula
         # remove libcompression check – it's expected to be present on recent macOS versions
         inreplace "Makefile",
           "$(wildcard /usr/lib/libcompression.dylib)", "x",
-          false
+          audit_result: false
       end
     end
 
